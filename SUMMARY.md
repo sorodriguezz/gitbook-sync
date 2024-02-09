@@ -7,9 +7,11 @@
 
 ## 🔴 Angular
 
-* [Page 1](angular/page-1.md)
+* [Crear librería Angular](angular/crear-libreria-angular.md)
 
 ## ⭕ NestJS
 
+* [Crear librería Nest](nestjs/crear-libreria-nest.md)
+* [Usar librería .tgz en local](nestjs/usar-libreria-.tgz-en-local.md)
 * [Hacer debug en Nest](nestjs/hacer-debug-en-nest.md)
 * [Envio de correo NestJS](nestjs/envio-de-correo-nestjs.md)
