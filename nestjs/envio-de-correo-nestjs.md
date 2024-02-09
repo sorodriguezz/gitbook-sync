@@ -182,7 +182,7 @@ export class AppController {
 
 ### Uso del servicio con Postman
 
-Para realizar este paso necesitas tener instalado Postman en tu equipo, donde copiarás el siguiente cURL y lo pegarás en la barra de la URL del Postman:
+Para realizar este paso necesitas tener instalado [Postman](https://www.postman.com/downloads/) en tu equipo, donde copiarás el siguiente cURL y lo pegarás en la barra de la URL del Postman:
 
 ```bash
 curl --location 'localhost:3000/send-email' \
@@ -195,4 +195,6 @@ curl --location 'localhost:3000/send-email' \
 
 Donde debes reemplazar los datos por el correo al que quieres que llegue el mail y un nombre de usuario.
 
-Link del repositorio: [https://github.com/sorodriguezz/nest-envio-correo](https://github.com/sorodriguezz/nest-envio-correo)
+### Link del repositorio
+
+[https://github.com/sorodriguezz/nest-envio-correo](https://github.com/sorodriguezz/nest-envio-correo)
