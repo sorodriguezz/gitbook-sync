@@ -8,13 +8,13 @@ description: >-
 
 <figure><img src="https://raw.githubusercontent.com/angular/angular/main/aio/src/assets/images/logos/angular/angular_renaissance.png" alt="" width="375"><figcaption></figcaption></figure>
 
-#### Dependecias
+### Dependecias
 
 * Angular v17
 * NodeJS >=18
 * npm >=10
 
-#### Creación de proyecto sin estructura
+### Creación de proyecto sin estructura
 
 Para instalar iniciar el proyecto se debe usar:
 
@@ -24,7 +24,7 @@ ng new name_project --no-create-application
 
 Esto creará un proyecto angular sin estructura de directorios
 
-#### Creación de librería
+### Creación de librería
 
 Para crear la librería dentro del proyecto que creamos, debemos usar:
 
@@ -33,7 +33,7 @@ cd name_project
 ng generate library ngx-mylibrary
 ```
 
-#### Creación de componente
+### Creación de componente
 
 Como sabemos, en la versión 17 de Angular ya no es necesario el uso de módulos. Ya los componentes se crean por defecto `standalone`. Para crear el componente simplemente hacemos:
 
@@ -79,7 +79,7 @@ export * from './lib/ngx-mylibrary.component';
 export * from './lib/input-test/input-test.component';
 ```
 
-#### Contruir librería
+### Contruir librería
 
 Para construir la librería usamos el siguiente comando en la raiz del proyecto:
 
@@ -89,7 +89,7 @@ npm build ngx-mylibrary
 
 Esto generará un directorio llamado `dist` y en su interior el directorio con el nombre de la librería, para este caso es `ngx-mylibrary`
 
-#### Empaquetar librería
+### Empaquetar librería
 
 Para empaquetar la librería usamos el siguiente comando, pero antes debemos ingresar a la ruta de la librería creada:
 
@@ -100,7 +100,7 @@ npm pack
 
 Esto generará un archivo con extensión `.tgz`, para este caso se llama `ngx-mylibrary-0.0.1.tgz`.
 
-#### Uso de librería en local
+### Uso de librería en local
 
 Para hacer uso de la librería en local. Vamos donde se encuentre nuestro `.tgz` y copiamos la ruta de acceso al archivo.
 
@@ -116,7 +116,7 @@ Para ver que se instaló exitosamente, vamos al `package.json` del proyecto dond
 "ngx-mylibrary": "file:../nombre-proyecto/dist/ngx-mylibrary/ngx-mylibrary-0.0.1.tgz",
 ```
 
-#### Publicar en NPM
+### Publicar en NPM
 
 Para publicar nuestra librería debemos crear una cuenta en [NPM](https://www.npmjs.com/).
 
