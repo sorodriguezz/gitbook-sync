@@ -422,10 +422,14 @@ public class KafkaConsumerListener {
 
 ```
 
-###
+
 
 ### Prueba del consumidor
 
 Una vez realizada la configuración del consumidor, levantamos el módulo de <mark style="color:purple;">consumer</mark> y posteriormente levantamos el módulo de <mark style="color:purple;">producer</mark>. Esto hará que nuestro consumidor escuche el mensaje que enviará el productor apenas levante el servicio:
 
 <figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+### Link repositorio
+
+[https://github.com/sorodriguezz/springboot-kafka-example](https://github.com/sorodriguezz/springboot-kafka-example)
