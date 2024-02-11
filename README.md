@@ -67,10 +67,9 @@ Para listar los tópicos usar el comando:
 
 Y para ver el detalle de un tópico, esto para ver replicas, configuraciones, etc. Se usa el comando:
 
-```
-// Decribir los detalles de un topic
-.\bin\windows\kafka-topics.bat --describe --topic {topic-name} --bootstrap-server {host}:9092
-```
+<pre><code>// Decribir los detalles de un topic
+<strong>.\bin\windows\kafka-topics.bat --describe --topic {topic-name} --bootstrap-server {host}:9092
+</strong></code></pre>
 
 
 
@@ -329,9 +328,104 @@ Una vez levante la aplicación por primera vez creará el tópico y dará un err
 
 ### Configuración del módulo consumidor
 
+Al igual que en el modulo de productor, pondremos en nuestro `application.properties` la siguiente linea de codigo:
 
+```properties
+# Configuración kafka
+spring.kafka.bootstrap-servers=localhost:9092
+```
 
+Luego crearemos nuestro directorio `config` y dentro el archivo llamado `KafkaConsumerConfig.java` en el cual tendrá el siguiente contenido:
 
+```java
+// KafkaConsumerConfig.java
+package com.kafka.consumer.config;
 
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
+import org.springframework.kafka.config.KafkaListenerContainerFactory;
+import org.springframework.kafka.core.ConsumerFactory;
+import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 
+import java.util.HashMap;
+import java.util.Map;
 
+@Configuration
+public class KafkaConsumerConfig {
+
+    // valor del application.properties
+    @Value("${spring.kafka.bootstrap-servers}")
+    private String bootstrapServers;
+
+    // se recomienda siempre recibir un objeto en el mensaje
+    public Map<String, Object> consumerConfig() {
+        Map<String, Object> properties = new HashMap<>();
+
+        // le decimos donde esta nuestro servidor de kafka
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+
+        // clase que tiene que deserializar la key
+        properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringSerializer.class);
+
+        // indicar quien deserializará el objeto del mensaje
+        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringSerializer.class);
+
+        return properties;
+    }
+
+    @Bean
+    public ConsumerFactory<String, String> consumerFactory() {
+        // definir consumer factory con la configuracion
+        return new DefaultKafkaConsumerFactory<>(consumerConfig());
+    }
+
+    // metodo para leer los mensajes
+    @Bean
+    public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, String>> consumer() {
+        ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
+
+        factory.setConsumerFactory(consumerFactory());
+
+        return factory;
+    }
+}
+
+```
+
+Una vez creada la configuración de Kafka consumidor, debemos crear un directorio `listeners`, donde estarán la configuración de los consumidores de escucha, dentro de este directorio crearemos la clase `KafkaConsumerListener.java` el cual tendrá el siguiente contenido:
+
+```java
+// KafkaConsumerListener.java
+package com.kafka.consumer.listeners;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.annotation.KafkaListener;
+
+@Configuration
+public class KafkaConsumerListener {
+    private Logger LOGGER = LoggerFactory.getLogger(KafkaConsumerListener.class);
+
+    // etiqueta para escuchar mensajes que se envian, el groupId es para formar grupos de consumidores
+    @KafkaListener(topics = {"messages-topic"}, groupId = "mi-id-grupo")
+    public void listener(String message) {
+        LOGGER.info("Mensaje recibido, el mensaje es: " + message);
+    }
+}
+
+```
+
+###
+
+### Prueba del consumidor
+
+Una vez realizada la configuración del consumidor, levantamos el módulo de <mark style="color:purple;">consumer</mark> y posteriormente levantamos el módulo de <mark style="color:purple;">producer</mark>. Esto hará que nuestro consumidor escuche el mensaje que enviará el productor apenas levante el servicio:
+
+<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
