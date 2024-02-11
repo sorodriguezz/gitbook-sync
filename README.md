@@ -10,7 +10,7 @@ description: >-
 
 Para comenzar necesitamos descargar Apache Kafka, lo descargaremos desde [aquí](https://kafka.apache.org/quickstart).
 
-<figure><img src=".gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Creamos un directorio en la ruta raíz (en este caso mi directorio será C:\kafka) y descomprimimos nuestro <mark style="color:red;">.tgz</mark> dentro del directorio creado.
 
@@ -80,10 +80,9 @@ Para esto volvemos abrir 2 consolas más donde estén en la ruta de Kafka. En el
 
 Para nuestra consola de <mark style="color:purple;">consumidor</mark> ejecutamos el siguiente comando para dejar en escucha:
 
-```
-// Inicia una consola para ver mensajes de un topic específico
-.\bin\windows\kafka-console-consumer.bat --topic {nombreTopic} --bootstrap-server {host}:9092
-```
+<pre><code>// Inicia una consola para ver mensajes de un topic específico
+<strong>.\bin\windows\kafka-console-consumer.bat --topic {nombreTopic} --bootstrap-server {host}:9092
+</strong></code></pre>
 
 Y para iniciar una consola <mark style="color:purple;">productor</mark> ejecutamos el siguiente comando:
 
@@ -94,13 +93,241 @@ Y para iniciar una consola <mark style="color:purple;">productor</mark> ejecutam
 
 
 
-### Creación de proyecto Spring Boot
+### Creación de proyectos Spring Boot
 
-Crear proyecto Spring, con las siguientes dependencias:
+Crear proyecto SpringBoot 3.2.2 con Maven y JAVA 17, con las siguientes dependencias:
 
 * Spring for Apacke Kafka
 * Spring Web
 * Spring Dev Tools
+
+Una vez creado este proyecto vamos al `pom.xml` y agregaremos la siguiente linea debajo del `<description>`
+
+```xml
+<packaging>pom</packaging>
+```
+
+Luego borraremos la carpeta completa de _<mark style="color:purple;">src</mark>_ del proyecto padre recién creado. (Esto es porque tiraremos módulos como microservicios dentro del proyecto principal)
+
+De igual manera quitamos nuestro `<`_`relativePath>`_ de nuestro `pom.xml`
+
+Luego generamos dos proyectos en [https://start.spring.io/](https://start.spring.io/) donde lo haremos con Maven, JAVA 17 y SpringBoot 3.2.2 para este ejemplo, no deben tener dependencias agregadas ya que las heredaran del servicio padre.
+
+Donde un proyecto se llamará _**SpringBootProvider**_ y el otro _**SpringBootConsumer**_
+
+Una vez los generamos, ambos proyectos los cortamos y los pegamos en la raíz del proyecto padre. En donde descomprimiremos ambos en la raíz. (dando en extraer aquí)
+
+### Creación de módulos
+
+Una vez realizado el paso anterior, debemos ir al `pom.xml` del servicio padre (SpringBootForKafka) y debemos copiar lo siguiente:
+
+```xml
+<groupId>com.kafka</groupId>
+<artifactId>SpringBootForKafka</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+```
+
+Y dejarlo dentro de nuestro `pom.xml` de nuestros servicios hijos, esto debe estar dentro de los `<parent>` reemplazando lo que ya estaba. Como en el siguiente ejemplo:
+
+```xml
+<parent>
+	<groupId>com.kafka</groupId>
+	<artifactId>SpringBootForKafka</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+</parent>
+```
+
+Una vez realizado estos pasos bajo el `<packaging>` del `pom.xml` de nuestro servicio padre agregaremos las etiquetas `<modules>` con el siguiente contenido:
+
+```xml
+<modules>
+        <module>SpringBootProvider</module>
+        <module>SpringBootConsumer</module>
+</modules>
+```
+
+Este nombre se saca desde el `<artifactId>` que le pusimos a nuestros servicios hijo.
+
+
+
+### Configuración básica de los módulos
+
+Para darle un logging personalizado a cada microservicio usaremos la pagina [https://devops.datenkollektiv.de/banner.txt/index.html](https://devops.datenkollektiv.de/banner.txt/index.html)
+
+Donde nos servirá para entregarnos el texto para loguear el nombre del proyecto
+
+Una vez generado estos texto, vamos al directorio `resource` de cada microservicio y creamos un archivo llamado `banner.txt` donde pegaremos el contenido.
+
+Un vez creado estos archivo banner, nos quedar darle un nombre y un puerto a nuestros módulos, los cuales en el directorio `resource` y archivo `application.properties` agregaremos lo siguiente para cada archivo del consumidor y productor.
+
+```properties
+# Consumer
+spring.application.name=Spring-kafka-consumer
+server.port=8081
+
+# Provider
+spring.application.name=Spring-kafka-provider
+server.port=8080
+```
+
+
+
+### Configuración del módulo productor
+
+Vamos a nuestro archivo application.properties y agregaremos las siguientes lineas al módulo:
+
+```properties
+# Configuración kafka
+spring.kafka.bootstrap-servers=localhost:9092
+```
+
+Posterior a esto, debemos configurar el tópico. Donde crearemos un `package` en `provider` llamado `config`, en el cual crearemos una clase llamada `KafkaTopicConfig.java` en el cual tendrá el siguiente contenido:
+
+```java
+// KafkaTopicConfig.java
+package com.kafka.provider.config;
+
+import org.apache.kafka.clients.admin.NewTopic;
+import org.apache.kafka.common.config.TopicConfig;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.config.TopicBuilder;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Configuration
+public class KafkaTopicConfig {
+
+
+    @Bean
+    public NewTopic generateTopic() {
+        // map para las configuraciones
+        Map<String, String> configurations = new HashMap<>();
+
+        // borra el mensaje (el compact mantiene el ultimo mensaje)
+        configurations.put(TopicConfig.CLEANUP_POLICY_CONFIG, TopicConfig.CLEANUP_POLICY_DELETE);
+
+        // cuanto será el tiempo que se van a retener los mensajes dentro del tipico (en ms, por defecto es -1 donde acumula todo)
+        configurations.put(TopicConfig.RETENTION_MS_CONFIG, "86400000");
+
+        // tamaño maximo de los segmentos dentro del topico (en bytes, por defecto es 1G)
+        configurations.put(TopicConfig.SEGMENT_BYTES_CONFIG, "1073741824");
+
+        // tamaño maximo de cada mensaje que voy a soportar (por defecto va en 1MB)
+        configurations.put(TopicConfig.MAX_MESSAGE_BYTES_CONFIG, "1000012");
+
+        // nombre de nuestro topico, particiones de nuestro topico y las replicas que debe tener el topico en caso de caer
+        return TopicBuilder.name("messages-topic").partitions(2).replicas(2).configs(configurations).build();
+    }
+
+}
+```
+
+Ahora debemos configurar el cliente para nuestro provider a Kafka. Para esto creamos dentro del directorio `config` un archivo llamado `KafkaProviderConfig.java` donde tendrá el siguiente contenido:
+
+```java
+// KafkaProviderConfig.java
+package com.kafka.provider.config;
+
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.core.DefaultKafkaProducerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.ProducerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Configuration
+public class KafkaProviderConfig {
+    // valor del application.properties
+    @Value("${spring.kafka.bootstrap-servers}")
+    private String bootstrapServers;
+
+    // se recomienda siempre recibir un objeto en el mensaje
+    public Map<String, Object> producerConfig() {
+        Map<String, Object> properties = new HashMap<>();
+
+        // le decimos donde esta nuestro servidor de kafka
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+
+        // cual es el objeto que se encarga de serializar la llave del mensaje a una secuencia de bytes
+        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+
+        // indicar quien serializará el objeto del mensaje
+        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+
+        return properties;
+    }
+
+    @Bean
+    public ProducerFactory<String, String> providerFactory() {
+        // usar el patron factory para el cliente kafka
+        return new DefaultKafkaProducerFactory<>(producerConfig());
+    }
+
+    @Bean
+    public KafkaTemplate<String, String> kafkaTemplate(ProducerFactory<String, String> producerFactory) {
+        // al ser un bean spring se encargará de inyectar el factory, esto se ocupa por la inyeccion de dependencia
+        return new KafkaTemplate<>(producerFactory);
+    }
+
+}
+```
+
+
+
+### Prueba del productor
+
+Para probar la configuración realizada, entraremos al archivo `SpringBootProviderApplication.java` donde agreegaremos la siguiente contenido:
+
+```java
+// SpringBootProviderApplication.java
+package com.kafka.provider;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.kafka.core.KafkaTemplate;
+
+@SpringBootApplication
+public class SpringBootProviderApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootProviderApplication.class, args);
+	}
+
+	@Bean
+	CommandLineRunner init(KafkaTemplate<String, String> kafkaTemplate) {
+		// ejecutar este codigo apenas levante la app
+		return args -> {
+			// envio de mensaje al topico
+			kafkaTemplate.send("messages-topic", "Hola desde springboot");
+		};
+	}
+
+}
+
+```
+
+{% hint style="info" %}
+Para probar esto debemos tener nuestra consola de consumidor arriba para ver los mensajes.
+{% endhint %}
+
+{% hint style="warning" %}
+Una vez levante la aplicación por primera vez creará el tópico y dará un error, entonces apenas lo cree, debemos bajar la aplicación nuevamente y listar los tópicos en Kafka, una vez listados debemos ver el tópico _**messages-topic.**_ Si esta creado volvemos a levantar la aplicación y veremos el mensaje en la consola de la escucha de tópicos.&#x20;
+
+<img src=".gitbook/assets/image.png" alt="" data-size="original">
+{% endhint %}
+
+
+
+### Configuración del módulo consumidor
 
 
 
