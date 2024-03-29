@@ -437,6 +437,8 @@ public class SpringSecurityAppApplication {
 
 Donde esto creará los usuarios con sus respectivos roles y permisos en base de datos.
 
+#### Configuración UserDetailsService para BD
+
 Ahora según el diagrama, necesitamos hacer uso de nuestro <mark style="color:purple;">**`UserDetailsService`**</mark> desde base de datos, para esto necesitamos crear un servicio llamado <mark style="color:purple;">**`UserDetailServiceImpl`**</mark> y tendrá el siguiente contenido:
 
 ```java
@@ -561,7 +563,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws
 
 Donde puede realizar muchas configuraciones para las rutas.
 
-
+## Token JWT
 
 
 
