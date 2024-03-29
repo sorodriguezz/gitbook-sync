@@ -116,9 +116,9 @@ public class SecurityConfig {
     @Bean // Configuracion sin notaciones - Security Filter Chain
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
-                .csrf(csrf -> csrf.disable())
-                .httpBasic(Customizer.withDefaults())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .csrf(csrf -> csrf.disable()) // sirve para vulnerabilidad para formulario, pero como no la usamos lo desactivamos
+                .httpBasic(Customizer.withDefaults()) // solo cuando nos logueamos con user y pass
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) //No se guardaranm sesiones en memoria, solo dependera de la expiracion del token.
                 .authorizeHttpRequests(http -> {
                     // Configurar los endpoints publicos
                     http.requestMatchers(HttpMethod.GET, "/auth/get").permitAll();
@@ -127,8 +127,10 @@ public class SecurityConfig {
                     http.requestMatchers(HttpMethod.POST, "/auth/post").hasAnyRole("ADMIN", "DEVELOPER");
                     http.requestMatchers(HttpMethod.PATCH, "/auth/patch").hasAnyAuthority("REFACTOR");
 
-                    // Configurar el resto de endpoint - NO ESPECIFICADOS
+                    // endp no especificados, no ingresan
                     http.anyRequest().denyAll();
+                    // endp no especificados, se tienen que loguear
+                    // http.anyRequest().authenticated();
                 })
                 .build(); // patrón builder
     }
@@ -170,15 +172,151 @@ public class SecurityConfig {
 }
 ```
 
+Para este caso creamos los usuarios simulando la extracción desde base de datos. Ya posteriormente crearemos la conexión a base de datos para traer los usuarios.
 
+Ahora podemos hacer esto mismo pero aprovechando el decorador <mark style="color:purple;">**@EnableMethodSecurity**</mark> que nos permite hacer las validaciones con decoradores en los controladores, como veremos en la siguiente sección. Esta parte es opcional para el final del proyecto.
 
+#### Accesos con @EnableMethodSecurity (Opcional)
 
+Para hacer uso de este decorador debemos cambiar nuestro <mark style="color:purple;">**SecurityFilterChain**</mark> de la siguiente manera (No se pueden ocupar las dos maneras al mismo tiempo, es una o la otra):
 
+```java
+// ...
+@Bean // Uso con notaciones
+public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    return httpSecurity
+        .csrf(csrf -> csrf.disable())
+        .httpBasic(Customizer.withDefaults())
+        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .build();
+}
+// ...
+```
 
+Una vez hayamos cambiado el <mark style="color:purple;">**SecurityFilterChain**</mark>, debemos realizar la configuración de acceso directamente en nuestro controller. Para esto necesitamos hacer las siguientes configuraciones:
 
+```java
+@RestController
+@RequestMapping("/auth")
+@PreAuthorize("denyAll()") // se debe tener el @EnableMethodSecurity en el SecurityConfig.class
+// denyAll por defecto rechaza todas las peticiones
+public class TestAuthController {
+    @GetMapping("/hello")
+    @PreAuthorize("hasAuthority('READ')") // solo pueden consultarlos usuarios con permiso "READ"
+    public String hello() {
+        return "Hello World";
+    }
+    
+    @GetMapping("/hello-secured")
+    @PreAuthorize("hasRole('ADMIN')") // Solo pueden acceder usuarios con role "ADMIN"
+    public String helloSecured() {
+        return "Hello World Secured";
+    }
+}
+```
 
+### Spring Security y Base de Datos
 
+Para traer los usuarios de base de datos necesitamos crear nuevos archivos y modificar un poco lo que ya existía.
 
+#### Creación de entidades
+
+Para comenzar, creamos un directorio **`persistences`** donde al interior crearemos otro directorio llamado **`entities`**, ahora crearemos el archivo **`UserEntity`** dentro del directorio **`entities`** y agregaremos el siguiente contenido:
+
+```java
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "users")
+public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true)
+    private String username;
+    private String password;
+
+    @Column(name = "is_enable")
+    private boolean isEnable;
+
+    @Column(name = "account_No_Expired")
+    private boolean accountNoExpired;
+
+    @Column(name = "account_No_Locked")
+    private boolean accountNoLocked;
+
+    @Column(name = "credential_No_Expired")
+    private boolean credentialNoExpired;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<RoleEntity> roleEntities = new HashSet<>();
+}
+```
+
+Ahora crearemos la entidad de **roles**, la cual crearemos dentro del directorio entities y le pondremos **`RoleEntity`**:
+
+```java
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "roles")
+public class RoleEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "role_name")
+    @Enumerated(EnumType.STRING)
+    private RoleEnum roleEnum;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "role_permissions", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "permission_id"))
+    private Set<PermissionEntity> permissionEntities = new HashSet<>();
+}
+```
+
+Para nuestro campo **`RoleEnum`** crearemos un archivo llamado **`RoleEnum`** dentro del mismo directorios **`entities`** para este caso y tendrá lo siguiente:
+
+```java
+public enum RoleEnum {
+    ADMIN,
+    USER,
+    INVITED,
+    DEVELOPER
+}
+```
+
+Ahora necesitamos crear los permisos, para esto crearemos el archivo **`PermissionEntity`** dentro del directorio **`entities`** y su contenido tendrá lo siguiente:
+
+```java
+@Setter
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "permissions")
+public class PermissionEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false, updatable = false)
+    private String name;
+}
+```
+
+Tambien puedes ocupar el name de permission como un enum, pero para este caso será un String.
+
+### Creación de usuarios en BD
 
 
 
