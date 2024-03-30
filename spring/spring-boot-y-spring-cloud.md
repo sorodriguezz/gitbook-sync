@@ -1,4 +1,4 @@
-# Herramientas Spring
+# Spring Boot y Spring Cloud
 
 <figure><img src="https://user-images.githubusercontent.com/33158051/103466606-760a4000-4d14-11eb-9941-2f3d00371471.png" alt=""><figcaption></figcaption></figure>
 
@@ -101,6 +101,6 @@ $ docker compose -f docker/docker-compose-mysql.yml up -d
 
 ### Diagrama de componentes
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Enlace de los videos seguidos: [Youtube](https://www.youtube.com/watch?v=-ksmE3KoX9U\&list=PL145AyWAbMDhwUbBL74s1D2ZV9EqBaQ1t)

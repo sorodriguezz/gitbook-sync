@@ -28,13 +28,13 @@ Para empezar a diseñar el reporte podemos agregar `Static Text` para agregar te
 
 Como en la siguiente imagen:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 * `Static Text`: Este elemento basta con arrastrarlo y soltarlo, agregar el texto que uno quiera y en la pestaña `Properties` cambiar sus propiedades, como agrandar texto, poner color, tipo de texto, etc.
 * `Text Field`: Este componente se arrastra y se pone donde nosotros queramos, ahora antes de usar tenemos que ir a la parte inferior izquierda de la pantalla, en `Outline` e ir a la parte de `Parameters`, luego hacemos clic derecho y presionamos `Create Parameter` y en la parte inferior derecha vamos a las `Properties` y cambiamos el nombre del parametro y su tipo de dato. Una vez configurado el tipo de parámetro, hacemos doble clic sobre el `Text Field` que creamos y vamos a `Parameters` nuevamente y seleccionamos el parámetro que creamos (haciendo doble clic), nos aseguramos que en la parte superior se vea como `$P{amount_paid}`
 * `Image`: Para agregar una imagen a nuestro reporte solo debemos descargar una imagen y ponerla a la altura de nuestro `reporte.jrxml` donde en la parte inferior derecha pondremos el nombre y extension de la imagen:
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Creación de proyecto Spring Boot
 
@@ -54,7 +54,7 @@ Al igual agregar la siguiente linea en el listado de parametros del reporte:
 
 El cual iria de la siguiente manera:
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuración de JRXML y JasperConfig
 
@@ -70,15 +70,13 @@ Como usar nuestro reporte de JasperSoft necesitamos la siguiente dependencia par
 
 Ahora debemos corregir las variables que nos generó automáticamente el JasperSoft, debemos cambiar las rutas de las imagenes por lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y las variables deberian verse así:
 
 ```xml
 <textFieldExpression><![CDATA[$P{voucher_id}]]></textFieldExpression>
 ```
-
-
 
 Una vez modificado esto, agregamos el siguiente fragmento de codigo en nuestra clase Main de nuestro proyecto SpringBoot, esto hará que apenas levantemos nuestro proyecto se generé nuestro reporte en la ruta indicada:
 
