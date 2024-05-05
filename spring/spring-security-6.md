@@ -563,13 +563,13 @@ Donde puede realizar muchas configuraciones para las rutas.
 
 Para comenzar agregaremos al diagrama un nuevo filtro, el cual es <mark style="color:purple;">**`JwtTokenValidator`**</mark> , ahora al realizar una petición debe haber un filtro que valide el token para poder registrarlo en el <mark style="color:purple;">**`SECURITY CONTEXT HOLDER`**</mark> .
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Explicación JWT
 
 Para comenzar tenemos la siguiente estructura de un JWT generico para esto usaremos la pagina [www.jwt.io ](https://jwt.io/)donde tenemos como muestra el siguiente token:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Toda la cadena de la izquierda se genera con un algoritmo de encriptación, el cual en este caso usa **`HS256.`** El token se divide en 3 secciones, el cual en el _**header**_ estará la metada e información del token.
 

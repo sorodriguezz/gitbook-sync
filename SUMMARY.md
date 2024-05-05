@@ -17,3 +17,4 @@
 * [Usar librería .tgz en local](nestjs/usar-libreria-.tgz-en-local.md)
 * [Hacer debug en Nest](nestjs/hacer-debug-en-nest.md)
 * [Envio de correo NestJS](nestjs/envio-de-correo-nestjs.md)
+* [Dockerizar Aplicación](nestjs/dockerizar-aplicacion.md)
