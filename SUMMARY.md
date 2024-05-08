@@ -18,3 +18,7 @@
 * [Hacer debug en Nest](nestjs/hacer-debug-en-nest.md)
 * [Envio de correo NestJS](nestjs/envio-de-correo-nestjs.md)
 * [Dockerizar Aplicación](nestjs/dockerizar-aplicacion.md)
+
+## 🕹️ Patrones
+
+* [Patrón DTO vs Patrón DAO](patrones/patron-dto-vs-patron-dao.md)
