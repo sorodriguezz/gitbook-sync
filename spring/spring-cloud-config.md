@@ -128,6 +128,8 @@ http://localhost:8888/product-microservice/dev
 
 http://localhost:8888/product-microservice/prod
 
+Este ultimo trae la información mas procesada y estructurada en formato JSON.
+
 ## Conexión cliente a config server
 
 
