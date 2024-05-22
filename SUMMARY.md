@@ -6,6 +6,7 @@
 * [Spring Boot y Spring Cloud](spring/spring-boot-y-spring-cloud.md)
 * [Jasper Report y SpringBoot 3](spring/jasper-report-y-springboot-3.md)
 * [Spring Security 6](spring/spring-security-6.md)
+* [Spring Cloud Config](spring/spring-cloud-config.md)
 
 ## 🔴 Angular
 
