@@ -103,7 +103,7 @@ spring:
 
 Donde como repositorio por defecto sería el `git.uri` y para extender con más repositorios de propiedades el uso de `repos`.&#x20;
 
-## Pruebas con Postman
+### Pruebas con Postman
 
 Para probar nuestro Config Server, debemos iniciarlo y con la ayuda del navegador o Postman realizamos la petición a las siguientes rutas:
 
