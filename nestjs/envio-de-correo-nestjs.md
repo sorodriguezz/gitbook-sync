@@ -162,7 +162,7 @@ export class AppService {
 }
 ```
 
-Y en nuestro `app.controller.ts` creamos el siguiente método para recibir una meticion **POST:**
+Y en nuestro `app.controller.ts` creamos el siguiente método para recibir una petición **POST:**
 
 ```typescript
 import { Body, Controller, Post } from '@nestjs/common';
