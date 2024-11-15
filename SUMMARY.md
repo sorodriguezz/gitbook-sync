@@ -23,4 +23,9 @@
 
 ## 🕹️ Patrones
 
+* [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
+* [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)
+* [Patrones de Concurrencia con Java](patrones/patrones-de-concurrencia-con-java.md)
+* [Patrones de Arquitectura con Java](patrones/patrones-de-arquitectura-con-java.md)
+* [Algoritmos y Complejidad Computacional con Java](patrones/algoritmos-y-complejidad-computacional-con-java.md)
 * [Patrón DTO vs Patrón DAO](patrones/patron-dto-vs-patron-dao.md)
