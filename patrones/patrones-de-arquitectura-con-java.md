@@ -37,13 +37,13 @@
 
 ***
 
-### 1. Introducción a los Patrones de Arquitectura
+## 1. Introducción a los Patrones de Arquitectura
 
-#### 1.1. ¿Qué son los Patrones de Arquitectura?
+### 1.1. ¿Qué son los Patrones de Arquitectura?
 
 Los **Patrones de Arquitectura** son soluciones reutilizables y probadas para problemas comunes en el diseño de sistemas a gran escala. Proporcionan una estructura general para la organización de componentes y su interacción, facilitando la toma de decisiones arquitectónicas y promoviendo buenas prácticas.
 
-#### 1.2. Importancia en el Desarrollo de Software
+### 1.2. Importancia en el Desarrollo de Software
 
 * **Escalabilidad**: Permiten construir sistemas que pueden crecer en tamaño y complejidad.
 * **Mantenibilidad**: Facilitan el mantenimiento y evolución del software.
@@ -52,9 +52,9 @@ Los **Patrones de Arquitectura** son soluciones reutilizables y probadas para pr
 
 ***
 
-### 2. Patrones de Arquitectura Comunes
+## 2. Patrones de Arquitectura Comunes
 
-#### 2.1. Arquitectura en Capas (N-Tier)
+### 2.1. Arquitectura en Capas (N-Tier)
 
 **Definición**
 
@@ -162,7 +162,7 @@ public class Usuario {
 
 ***
 
-#### 2.2. Arquitectura MVC (Modelo-Vista-Controlador)
+### 2.2. Arquitectura MVC (Modelo-Vista-Controlador)
 
 **Definición**
 
@@ -233,7 +233,7 @@ public class ProductoControlador {
 
 ***
 
-#### 2.3. Arquitectura de Microservicios
+### 2.3. Arquitectura de Microservicios
 
 **Definición**
 
@@ -302,7 +302,7 @@ public interface UsuarioCliente {
 
 ***
 
-#### 2.4. Arquitectura Hexagonal (Puertos y Adaptadores)
+### 2.4. Arquitectura Hexagonal (Puertos y Adaptadores)
 
 **Definición**
 
@@ -371,7 +371,7 @@ public class CuentaRepositorioJPA implements CuentaRepositorio {
 
 ***
 
-#### 2.5. Arquitectura Basada en Eventos
+### 2.5. Arquitectura Basada en Eventos
 
 **Definición**
 
@@ -428,7 +428,7 @@ public class NotificacionServicio {
 
 ***
 
-#### 2.6. Arquitectura de Pipeline
+### 2.6. Arquitectura de Pipeline
 
 **Definición**
 
@@ -511,7 +511,7 @@ public class Main {
 
 ***
 
-#### 2.7. Arquitectura Orientada a Servicios (SOA)
+### 2.7. Arquitectura Orientada a Servicios (SOA)
 
 **Definición**
 
@@ -570,7 +570,7 @@ public class PublicadorServicio {
 
 ***
 
-#### 2.8. Arquitectura Clean (Limpia)
+### 2.8. Arquitectura Clean (Limpia)
 
 **Definición**
 
@@ -664,7 +664,7 @@ public class ClienteRepositorioJPA implements ClienteRepositorio {
 
 ***
 
-#### 2.9. CQRS (Segregación de Responsabilidades de Consulta y Comando)
+### 2.9. CQRS (Segregación de Responsabilidades de Consulta y Comando)
 
 **Definición**
 
@@ -742,7 +742,7 @@ public class ProductoControlador {
 
 ***
 
-#### 2.10. Event Sourcing
+### 2.10. Event Sourcing
 
 **Definición**
 
@@ -821,9 +821,9 @@ public class ProductoAgregado {
 
 ***
 
-### 3. Implementación de Patrones de Arquitectura en Java
+## 3. Implementación de Patrones de Arquitectura en Java
 
-#### 3.1. Ejemplos Prácticos
+### 3.1. Ejemplos Prácticos
 
 **Caso de Estudio: Aplicación E-commerce**
 
@@ -842,7 +842,7 @@ public class ProductoAgregado {
 * **Consumo de Eventos**: `InventarioService` escucha `PedidoCreado` y actualiza el inventario.
 * **CQRS en Catalogo**: Lecturas optimizadas para búsquedas rápidas, escrituras manejan actualizaciones de productos.
 
-#### 3.2. Buenas Prácticas
+### 3.2. Buenas Prácticas
 
 * **Elegir el Patrón Adecuado**: No todos los patrones son adecuados para todos los proyectos.
 * **Simplicidad**: No complicar innecesariamente la arquitectura.
@@ -851,14 +851,14 @@ public class ProductoAgregado {
 
 ***
 
-### 4. Consideraciones de Diseño y Escalabilidad
+## 4. Consideraciones de Diseño y Escalabilidad
 
-#### 4.1. Desacoplamiento y Cohesión
+### 4.1. Desacoplamiento y Cohesión
 
 * **Desacoplamiento**: Reducir las dependencias entre componentes para facilitar el mantenimiento y la escalabilidad.
 * **Cohesión**: Asegurar que los componentes realizan una única tarea o responsabilidad.
 
-#### 4.2. Principios SOLID
+### 4.2. Principios SOLID
 
 * **S**: **Single Responsibility Principle**
 * **O**: **Open/Closed Principle**
@@ -868,7 +868,7 @@ public class ProductoAgregado {
 
 Aplicar estos principios mejora la calidad del código y la arquitectura.
 
-#### 4.3. Escalabilidad Horizontal y Vertical
+### 4.3. Escalabilidad Horizontal y Vertical
 
 * **Escalabilidad Horizontal**: Agregar más máquinas para manejar la carga.
 * **Escalabilidad Vertical**: Aumentar los recursos de una máquina existente.
@@ -877,35 +877,35 @@ Los patrones como Microservicios y Arquitectura Basada en Eventos facilitan la e
 
 ***
 
-### 5. Herramientas y Frameworks para Arquitectura en Java
+## 5. Herramientas y Frameworks para Arquitectura en Java
 
-#### 5.1. Spring Framework
+### 5.1. Spring Framework
 
 * **Spring Boot**: Simplifica la creación de aplicaciones basadas en Spring.
 * **Spring Cloud**: Herramientas para construir sistemas distribuidos y microservicios.
 * **Spring Data**: Acceso simplificado a bases de datos.
 
-#### 5.2. MicroProfile
+### 5.2. MicroProfile
 
 * Conjunto de APIs y herramientas para desarrollar microservicios en Java EE.
 * **MicroProfile Config**, **MicroProfile Fault Tolerance**, etc.
 
-#### 5.3. Jakarta EE
+### 5.3. Jakarta EE
 
 * Evolución de Java EE.
 * Soporte para **JAX-RS**, **EJB**, **JPA**, entre otros.
 
 ***
 
-### 6. Conclusión
+## 6. Conclusión
 
-#### 6.1. Pasos Siguientes
+### 6.1. Pasos Siguientes
 
 * **Practicar**: Implementa estos patrones en proyectos personales o profesionales.
 * **Analizar Casos Reales**: Estudia cómo empresas exitosas aplican estos patrones.
 * **Mantenerse Actualizado**: La arquitectura de software es un campo en constante evolución.
 
-#### 6.2. Recursos Adicionales
+### 6.2. Recursos Adicionales
 
 * **Libros**:
   * _"Clean Architecture"_ por Robert C. Martin.

@@ -36,7 +36,7 @@
 
 ***
 
-### 1. Introducción a los Patrones de Diseño
+## 1. Introducción a los Patrones de Diseño
 
 #### ¿Qué son los Patrones de Diseño?
 
@@ -58,11 +58,11 @@ Según el libro _"Design Patterns: Elements of Reusable Object-Oriented Software
 
 ***
 
-### 2. Patrones Creacionales
+## 2. Patrones Creacionales
 
 Los patrones creacionales se enfocan en la manera de crear objetos, ocultando la lógica de creación y haciendo el sistema independiente de cómo se crean, componen y representan los objetos.
 
-#### 2.1. Singleton
+### 2.1. Singleton
 
 **Definición**
 
@@ -168,7 +168,7 @@ public class Singleton {
 
 ***
 
-#### 2.2. Factory Method
+### 2.2. Factory Method
 
 **Definición**
 
@@ -318,7 +318,7 @@ Implementa una fábrica que cree diferentes tipos de documentos (`WordDocument`,
 
 ***
 
-#### 2.3. Abstract Factory
+### 2.3. Abstract Factory
 
 **Definición**
 
@@ -456,7 +456,7 @@ Implementa una `Abstract Factory` para crear diferentes tipos de bases de datos 
 
 ***
 
-#### 2.4. Builder
+### 2.4. Builder
 
 **Definición**
 
@@ -602,7 +602,7 @@ Implementa un `Builder` para crear una `Pizza` con diferentes ingredientes (masa
 
 ***
 
-#### 2.5. Prototype
+### 2.5. Prototype
 
 **Definición**
 
@@ -686,11 +686,11 @@ Crea un `Prototype` de un `Documento` que pueda clonarse y modificar ciertas pro
 
 ***
 
-### 3. Patrones Estructurales
+## 3. Patrones Estructurales
 
 Los patrones estructurales se ocupan de la composición de clases y objetos para formar estructuras más grandes.
 
-#### 3.1. Adapter
+### 3.1. Adapter
 
 **Definición**
 
@@ -768,7 +768,7 @@ Implementa un `Adapter` que permita a una aplicación de dibujo utilizar librer�
 
 ***
 
-#### 3.2. Bridge
+### 3.2. Bridge
 
 **Definición**
 
@@ -914,7 +914,7 @@ Crea un `Bridge` para figuras (`Forma`) y colores (`Color`), permitiendo combina
 
 ***
 
-#### 3.3. Composite
+### 3.3. Composite
 
 **Definición**
 
@@ -1038,7 +1038,7 @@ Implementa un sistema de menú utilizando el patrón Composite, donde los elemen
 
 ***
 
-#### 3.4. Decorator
+### 3.4. Decorator
 
 **Definición**
 
@@ -1157,7 +1157,7 @@ Crea un sistema de bebidas donde puedas añadir ingredientes (leche, azúcar, ch
 
 ***
 
-#### 3.5. Facade
+### 3.5. Facade
 
 **Definición**
 
@@ -1248,7 +1248,7 @@ Implementa una fachada para un sistema de compra en línea que interactúa con i
 
 ***
 
-#### 3.6. Flyweight
+### 3.6. Flyweight
 
 **Definición**
 
@@ -1352,7 +1352,7 @@ Implementa un sistema de árboles en un bosque, donde los árboles comparten dat
 
 ***
 
-#### 3.7. Proxy
+### 3.7. Proxy
 
 **Definición**
 
@@ -1456,11 +1456,11 @@ Implementa un Proxy de seguridad que controle el acceso a un sistema de document
 
 ***
 
-### 4. Patrones de Comportamiento
+## 4. Patrones de Comportamiento
 
 Los patrones de comportamiento se centran en las interacciones y responsabilidades entre objetos.
 
-#### 4.1. Chain of Responsibility
+### 4.1. Chain of Responsibility
 
 **Definición**
 
@@ -1561,7 +1561,7 @@ Implementa una cadena de responsabilidad para un sistema de aprobación de gasto
 
 ***
 
-#### 4.2. Command
+### 4.2. Command
 
 **Definición**
 
@@ -1685,7 +1685,7 @@ Crea un sistema de órdenes para un restaurante donde los meseros toman órdenes
 
 ***
 
-#### 4.3. Iterator
+### 4.3. Iterator
 
 **Definición**
 
@@ -1790,7 +1790,7 @@ Implementa un iterador para una lista enlazada personalizada.
 
 ***
 
-#### 4.4. Mediator
+### 4.4. Mediator
 
 **Definición**
 
@@ -1913,7 +1913,7 @@ Implementa un Mediator para controlar el aterrizaje y despegue de aviones en un 
 
 ***
 
-#### 4.5. Memento
+### 4.5. Memento
 
 **Definición**
 
@@ -2036,7 +2036,7 @@ Implementa un sistema de juego donde puedas guardar y restaurar el estado del ju
 
 ***
 
-#### 4.6. Observer
+### 4.6. Observer
 
 **Definición**
 
@@ -2144,7 +2144,7 @@ Implementa un sistema de alerta meteorológica donde los dispositivos reciben ac
 
 ***
 
-#### 4.7. State
+### 4.7. State
 
 **Definición**
 
@@ -2340,7 +2340,7 @@ Implementa una puerta con estados `Cerrado`, `Abierto` y `Bloqueado` utilizando 
 
 ***
 
-#### 4.8. Strategy
+### 4.8. Strategy
 
 **Definición**
 
@@ -2430,7 +2430,7 @@ Implementa un sistema de pago que soporte diferentes métodos (tarjeta, PayPal) 
 
 ***
 
-#### 4.9. Template Method
+### 4.9. Template Method
 
 **Definición**
 
@@ -2535,7 +2535,7 @@ Crea un proceso de fabricación de vehículos donde diferentes tipos de vehícul
 
 ***
 
-#### 4.10. Visitor
+### 4.10. Visitor
 
 **Definición**
 
@@ -2664,7 +2664,7 @@ Implementa un Visitor que calcule el área y perímetro de diferentes figuras ge
 
 ***
 
-### 5. Buenas Prácticas en el Uso de Patrones de Diseño
+## 5. Buenas Prácticas en el Uso de Patrones de Diseño
 
 * **No Forzar el Uso de Patrones:** Utiliza patrones cuando aporten valor real al diseño, no simplemente por usarlos.
 * **Comprender el Problema:** Asegúrate de entender completamente el problema antes de aplicar un patrón.

@@ -37,19 +37,19 @@
 
 ***
 
-### 1. Introducción a la Concurrencia en Java
+## 1. Introducción a la Concurrencia en Java
 
-#### 1.1. ¿Qué es la Concurrencia?
+### 1.1. ¿Qué es la Concurrencia?
 
 La **concurrencia** es la capacidad de un programa para ejecutar varias tareas simultáneamente, mejorando el rendimiento y la capacidad de respuesta. En Java, esto se logra mediante el uso de **hilos** (threads).
 
-#### 1.2. Desafíos de la Programación Concurrente
+### 1.2. Desafíos de la Programación Concurrente
 
 * **Condiciones de Carrera**: Ocurren cuando múltiples hilos acceden y modifican datos compartidos sin la sincronización adecuada.
 * **Deadlocks**: Situaciones donde dos o más hilos esperan indefinidamente por recursos bloqueados por el otro.
 * **Visibilidad y Atomicidad**: Problemas relacionados con la correcta lectura y escritura de variables compartidas.
 
-#### 1.3. Modelos de Concurrencia
+### 1.3. Modelos de Concurrencia
 
 * **Multithreading**: Uso de múltiples hilos dentro de un proceso.
 * **Actor Model**: Comunicación entre entidades independientes a través de mensajes.
@@ -57,9 +57,9 @@ La **concurrencia** es la capacidad de un programa para ejecutar varias tareas s
 
 ***
 
-### 2. Patrones de Concurrencia en Java
+## 2. Patrones de Concurrencia en Java
 
-#### 2.1. Thread Pool (Grupo de Hilos)
+### 2.1. Thread Pool (Grupo de Hilos)
 
 **Definición**
 
@@ -111,7 +111,7 @@ class WorkerThread implements Runnable {
 * **Eficiencia**: Evita el costo de creación y destrucción de hilos.
 * **Control**: Limita el número de hilos activos.
 
-#### 2.2. Producer-Consumer (Productor-Consumidor)
+### 2.2. Producer-Consumer (Productor-Consumidor)
 
 **Definición**
 
@@ -187,7 +187,7 @@ class Consumidor implements Runnable {
 * **Desacoplamiento**: Productores y consumidores funcionan independientemente.
 * **Buffering**: Maneja diferencias en la velocidad de producción y consumo.
 
-#### 2.3. Future y CompletableFuture
+### 2.3. Future y CompletableFuture
 
 **Definición**
 
@@ -250,7 +250,7 @@ public class CompletableFutureExample {
 * **No Bloqueante**: Permite continuar la ejecución sin esperar el resultado inmediato.
 * **Composición**: Combinar y encadenar operaciones asíncronas.
 
-#### 2.4. Read-Write Lock (Bloqueo Lectura-Escritura)
+### 2.4. Read-Write Lock (Bloqueo Lectura-Escritura)
 
 **Definición**
 
@@ -299,7 +299,7 @@ public class ReadWriteLockExample {
 * **Mayor Concurrencia**: Permite lecturas concurrentes.
 * **Seguridad**: Protege contra escrituras concurrentes.
 
-#### 2.5. Monitor Object
+### 2.5. Monitor Object
 
 **Definición**
 
@@ -330,7 +330,7 @@ public class Contador {
 * **Encapsulación**: La sincronización está contenida dentro del objeto.
 * **Simplicidad**: Facilita la gestión de la sincronización.
 
-#### 2.6. Immutable Object (Objeto Inmutable)
+### 2.6. Immutable Object (Objeto Inmutable)
 
 **Definición**
 
@@ -363,7 +363,7 @@ public final class Punto {
 * **Thread-Safe**: No requiere sincronización.
 * **Simplicidad**: Reduce errores asociados con modificaciones concurrentes.
 
-#### 2.7. Semaphore (Semáforo)
+### 2.7. Semaphore (Semáforo)
 
 **Definición**
 
@@ -414,7 +414,7 @@ class Tarea implements Runnable {
 * **Control**: Limita el acceso a recursos.
 * **Flexibilidad**: Puede utilizarse para implementar varios patrones de sincronización.
 
-#### 2.8. Barrier (Barrera)
+### 2.8. Barrier (Barrera)
 
 **Definición**
 
@@ -466,7 +466,7 @@ class Tarea implements Runnable {
 * **Coordinación**: Sincroniza hilos en puntos específicos.
 * **Reutilizable**: `CyclicBarrier` puede reutilizarse después de liberar a los hilos.
 
-#### 2.9. Fork/Join
+### 2.9. Fork/Join
 
 **Definición**
 
@@ -514,7 +514,7 @@ class Fibonacci extends RecursiveTask<Integer> {
 * **Eficiencia**: Aprovecha múltiples núcleos.
 * **Escalabilidad**: Maneja grandes cantidades de trabajo dividido.
 
-#### 2.10. Active Object
+### 2.10. Active Object
 
 **Definición**
 
@@ -558,9 +558,9 @@ public class ActiveObject {
 
 ***
 
-### 3. Implementación de Patrones de Concurrencia en Java
+## 3. Implementación de Patrones de Concurrencia en Java
 
-#### 3.1. Ejemplos Prácticos
+### 3.1. Ejemplos Prácticos
 
 **Caso de Estudio: Procesamiento de Archivos en Paralelo**
 
@@ -606,7 +606,7 @@ public class FileProcessingApp {
 }
 ```
 
-#### 3.2. Buenas Prácticas
+### 3.2. Buenas Prácticas
 
 * **Evitar Sincronización Excesiva**: Sincronizar solo lo necesario para mejorar el rendimiento.
 * **Utilizar Estructuras Thread-Safe**: Aprovechar las clases de `java.util.concurrent`.
@@ -614,9 +614,9 @@ public class FileProcessingApp {
 
 ***
 
-### 4. Consideraciones de Seguridad y Rendimiento
+## 4. Consideraciones de Seguridad y Rendimiento
 
-#### 4.1. Evitar Condiciones de Carrera
+### 4.1. Evitar Condiciones de Carrera
 
 * **Sincronizar Accesos**: Utilizar `synchronized`, locks u otras técnicas para proteger datos compartidos.
 * **Variables Atómicas**: Utilizar clases como `AtomicInteger` para operaciones atómicas.
@@ -639,7 +639,7 @@ public class ContadorAtomic {
 }
 ```
 
-#### 4.2. Deadlocks y Livelocks
+### 4.2. Deadlocks y Livelocks
 
 * **Evitar Orden de Bloqueos Circular**: Adquirir locks en un orden consistente.
 * **Utilizar Timeouts**: Establecer límites de tiempo al intentar adquirir locks.
@@ -651,9 +651,9 @@ public class ContadorAtomic {
 
 ***
 
-### 5. Herramientas y Librerías para Concurrencia en Java
+## 5. Herramientas y Librerías para Concurrencia en Java
 
-#### 5.1. Java Concurrency API
+### 5.1. Java Concurrency API
 
 La **Java Concurrency API** ofrece un amplio conjunto de herramientas:
 
@@ -661,7 +661,7 @@ La **Java Concurrency API** ofrece un amplio conjunto de herramientas:
 * **Locks y Synchronizers**: Incluye `ReentrantLock`, `Semaphore`, `CountDownLatch`, etc.
 * **Concurrent Collections**: Clases thread-safe como `ConcurrentHashMap`, `CopyOnWriteArrayList`.
 
-#### 5.2. Librerías Externas
+### 5.2. Librerías Externas
 
 * **Akka**: Implementa el modelo de actores para concurrencia y escalabilidad.
 * **RxJava**: Programación reactiva para manejar flujos de datos asíncronos.
@@ -669,15 +669,15 @@ La **Java Concurrency API** ofrece un amplio conjunto de herramientas:
 
 ***
 
-### 6. Conclusión
+## 6. Conclusión
 
-#### 6.1. Pasos Siguientes
+### 6.1. Pasos Siguientes
 
 * **Practicar**: Implementa estos patrones en proyectos personales.
 * **Analizar Código Existente**: Observa cómo frameworks y aplicaciones utilizan estos patrones.
 * **Mantenerse Actualizado**: La concurrencia en Java evoluciona; aprende sobre nuevas herramientas y técnicas.
 
-#### 6.2. Recursos Adicionales
+### 6.2. Recursos Adicionales
 
 * **Libro**: _Java Concurrency in Practice_ por Brian Goetz.
 * **Documentación Oficial**: [Java Concurrency Utilities](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html)

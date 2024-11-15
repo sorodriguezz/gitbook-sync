@@ -39,13 +39,13 @@
 
 ***
 
-### 1. Introducción a los Patrones de Resiliencia
+## 1. Introducción a los Patrones de Resiliencia
 
-#### 1.1. ¿Qué son los Patrones de Resiliencia?
+### 1.1. ¿Qué son los Patrones de Resiliencia?
 
 Los **Patrones de Resiliencia** son soluciones arquitectónicas que permiten a las aplicaciones manejar fallas de manera elegante y continuar operando bajo condiciones adversas. Estos patrones son esenciales en sistemas distribuidos y microservicios, donde la posibilidad de fallas es inherente debido a la naturaleza de las redes y dependencias externas.
 
-#### 1.2. Importancia en Aplicaciones Java
+### 1.2. Importancia en Aplicaciones Java
 
 En el desarrollo moderno con Java, especialmente al utilizar frameworks como Spring Boot y arquitecturas de microservicios, es crucial implementar patrones de resiliencia para asegurar que las aplicaciones sean:
 
@@ -55,9 +55,9 @@ En el desarrollo moderno con Java, especialmente al utilizar frameworks como Spr
 
 ***
 
-### 2. Principales Patrones de Resiliencia
+## 2. Principales Patrones de Resiliencia
 
-#### 2.1. Retry (Reintento)
+### 2.1. Retry (Reintento)
 
 **Definición**
 
@@ -74,7 +74,7 @@ El patrón **Retry** implica volver a intentar una operación que ha fallado, co
 * **Intervalo entre Reintentos**: Puede ser fijo, exponencial o basado en un jitter aleatorio.
 * **Manejo de Excepciones Específicas**: Reintentar solo en ciertos tipos de fallas (e.g., `IOException`).
 
-#### 2.2. Circuit Breaker (Interruptor de Circuito)
+### 2.2. Circuit Breaker (Interruptor de Circuito)
 
 **Definición**
 
@@ -91,7 +91,7 @@ El patrón **Circuit Breaker** previene llamadas continuas a un servicio o recur
 * Proteger un microservicio que está experimentando problemas de rendimiento.
 * Evitar sobrecargar una API externa que está devolviendo errores.
 
-#### 2.3. Timeout (Tiempo de Espera)
+### 2.3. Timeout (Tiempo de Espera)
 
 **Definición**
 
@@ -102,7 +102,7 @@ El patrón **Timeout** establece un límite de tiempo para una operación. Si la
 * Evitar que una solicitud HTTP bloquee indefinidamente esperando una respuesta.
 * Limitar el tiempo de ejecución de una consulta a base de datos.
 
-#### 2.4. Bulkhead (Mamparo)
+### 2.4. Bulkhead (Mamparo)
 
 **Definición**
 
@@ -113,7 +113,7 @@ El patrón **Bulkhead** aísla diferentes partes de un sistema para que una fall
 * Separar los hilos o conexiones utilizados por diferentes servicios o funcionalidades.
 * Limitar el número de conexiones simultáneas a un recurso específico.
 
-#### 2.5. Fallback (Alternativa)
+### 2.5. Fallback (Alternativa)
 
 **Definición**
 
@@ -124,7 +124,7 @@ El patrón **Fallback** proporciona una respuesta alternativa cuando una operaci
 * Devolver datos almacenados en caché cuando un servicio externo no está disponible.
 * Proporcionar un mensaje predeterminado al usuario si un componente falla.
 
-#### 2.6. Rate Limiting (Limitación de Tasa)
+### 2.6. Rate Limiting (Limitación de Tasa)
 
 **Definición**
 
@@ -135,7 +135,7 @@ El patrón **Rate Limiting** controla el número de solicitudes que se pueden re
 * Limitar el número de llamadas a una API de terceros para cumplir con sus restricciones.
 * Proteger un servicio interno de ser inundado por solicitudes excesivas.
 
-#### 2.7. Cache (Caché)
+### 2.7. Cache (Caché)
 
 **Definición**
 
@@ -146,7 +146,7 @@ El patrón **Cache** almacena datos temporalmente para reducir la carga en recur
 * Almacenar en caché las respuestas de una API para reducir llamadas redundantes.
 * Cachear resultados de consultas frecuentes a la base de datos.
 
-#### 2.8. Idempotencia
+### 2.8. Idempotencia
 
 **Definición**
 
@@ -158,13 +158,13 @@ Una operación es **idempotente** si se puede realizar múltiples veces sin camb
 
 ***
 
-### 3. Implementación de Patrones de Resiliencia en Java
+## 3. Implementación de Patrones de Resiliencia en Java
 
-#### 3.1. Uso de Resilience4j
+### 3.1. Uso de Resilience4j
 
 **Resilience4j** es una librería ligera y fácil de usar para implementar patrones de resiliencia en aplicaciones Java y especialmente integrable con Spring Boot.
 
-**3.1.1. Configuración e Integración**
+#### **3.1.1. Configuración e Integración**
 
 **Añadir Dependencia**
 
@@ -188,7 +188,7 @@ En tu clase principal:
 public class Application { ... }
 ```
 
-**3.1.2. Ejemplos Prácticos**
+#### **3.1.2. Ejemplos Prácticos**
 
 **Implementación del Retry Pattern:**
 
@@ -216,7 +216,7 @@ resilience4j.retry.instances.miServicio.maxRetryAttempts=3
 resilience4j.retry.instances.miServicio.waitDuration=1s
 ```
 
-#### 3.2. Uso de Spring Cloud Circuit Breaker
+### 3.2. Uso de Spring Cloud Circuit Breaker
 
 **Spring Cloud Circuit Breaker** es una abstracción que proporciona una forma consistente de implementar el patrón Circuit Breaker con diferentes librerías subyacentes como Resilience4j.
 
@@ -256,15 +256,15 @@ public class MiServicio {
 }
 ```
 
-#### 3.3. Uso de Failsafe
+### 3.3. Uso de Failsafe
 
 **Failsafe** es otra librería que proporciona mecanismos de resiliencia y es útil en situaciones donde no se utiliza Spring.
 
 ***
 
-### 4. Ejemplos Detallados de Patrones
+## 4. Ejemplos Detallados de Patrones
 
-#### 4.1. Implementación del Retry Pattern
+### 4.1. Implementación del Retry Pattern
 
 **Ejemplo:**
 
@@ -297,7 +297,7 @@ public class MiServicio {
 }
 ```
 
-#### 4.2. Implementación del Circuit Breaker Pattern
+### 4.2. Implementación del Circuit Breaker Pattern
 
 **Ejemplo:**
 
@@ -330,7 +330,7 @@ public class MiServicio {
 }
 ```
 
-#### 4.3. Implementación del Bulkhead Pattern
+### 4.3. Implementación del Bulkhead Pattern
 
 **Ejemplo:**
 
@@ -364,7 +364,7 @@ public class MiServicio {
 }
 ```
 
-#### 4.4. Combinación de Patrones
+### 4.4. Combinación de Patrones
 
 **Ejemplo:**
 
@@ -396,34 +396,34 @@ public class MiServicio {
 
 ***
 
-### 5. Buenas Prácticas y Consideraciones
+## 5. Buenas Prácticas y Consideraciones
 
-#### 5.1. Monitoreo y Logging
+### 5.1. Monitoreo y Logging
 
 * **Monitorear Métricas**: Utilizar herramientas como Micrometer y Prometheus para recopilar métricas de patrones de resiliencia.
 * **Logging Detallado**: Registrar eventos importantes como aperturas de Circuit Breaker, reintentos y fallbacks.
 
-#### 5.2. Configuración Dinámica
+### 5.2. Configuración Dinámica
 
 * **Externalizar Configuraciones**: Utilizar archivos de propiedades o servicios de configuración para ajustar parámetros sin recompilar.
 * **Feature Flags**: Controlar la activación o desactivación de patrones según el entorno.
 
-#### 5.3. Manejo de Excepciones
+### 5.3. Manejo de Excepciones
 
 * **Excepciones Específicas**: Configurar patrones para que reaccionen solo a ciertas excepciones.
 * **Fallbacks Adecuados**: Proporcionar alternativas que mantengan una buena experiencia de usuario.
 
 ***
 
-### 6. Conclusión
+## 6. Conclusión
 
-#### 6.1. Pasos Siguientes
+### 6.1. Pasos Siguientes
 
 * **Implementar en Proyectos Reales**: Aplicar estos patrones en tus aplicaciones actuales para mejorar su resiliencia.
 * **Explorar Librerías**: Profundizar en Resilience4j y otras herramientas disponibles.
 * **Mantenerse Actualizado**: Los patrones y herramientas evolucionan; es importante estar al día con las mejores prácticas.
 
-#### 6.2. Recursos Adicionales
+### 6.2. Recursos Adicionales
 
 * [Documentación de Resilience4j](https://resilience4j.readme.io/)
 * [Guía de Spring Cloud Circuit Breaker](https://spring.io/projects/spring-cloud-circuit-breaker)

@@ -40,13 +40,13 @@
 
 ***
 
-### 1. Introducción a los Algoritmos
+## 1. Introducción a los Algoritmos
 
-#### 1.1. ¿Qué es un Algoritmo?
+### 1.1. ¿Qué es un Algoritmo?
 
 Un **algoritmo** es un conjunto bien definido de pasos o instrucciones para resolver un problema o realizar una tarea específica. En programación, los algoritmos son fundamentales para desarrollar soluciones eficientes y efectivas.
 
-#### 1.2. Importancia de los Algoritmos en Programación
+### 1.2. Importancia de los Algoritmos en Programación
 
 * **Eficiencia**: Permiten resolver problemas de manera óptima en términos de tiempo y recursos.
 * **Reutilización**: Proporcionan soluciones generales que pueden aplicarse a múltiples situaciones.
@@ -54,13 +54,13 @@ Un **algoritmo** es un conjunto bien definido de pasos o instrucciones para reso
 
 ***
 
-### 2. Notación Big O y Complejidad Computacional
+## 2. Notación Big O y Complejidad Computacional
 
-#### 2.1. ¿Qué es la Notación Big O?
+### 2.1. ¿Qué es la Notación Big O?
 
 La **notación Big O** es una forma matemática de describir el rendimiento o la complejidad de un algoritmo, especialmente en términos de **tiempo de ejecución** o **uso de espacio** en función del tamaño de la entrada (n). Se centra en el comportamiento asintótico, es decir, cómo se comporta el algoritmo cuando n tiende a infinito.
 
-#### 2.2. Tipos Comunes de Complejidad
+### 2.2. Tipos Comunes de Complejidad
 
 1. **O(1) - Tiempo Constante**: El tiempo de ejecución no cambia con el tamaño de la entrada.
 2. **O(log n) - Tiempo Logarítmico**: El tiempo de ejecución crece logarítmicamente con el tamaño de la entrada.
@@ -69,7 +69,7 @@ La **notación Big O** es una forma matemática de describir el rendimiento o la
 5. **O(n²) - Tiempo Cuadrático**: El tiempo de ejecución crece proporcional al cuadrado del tamaño de la entrada.
 6. **O(2^n) - Tiempo Exponencial**: El tiempo de ejecución crece exponencialmente con el tamaño de la entrada.
 
-#### 2.3. Cómo Medir la Complejidad
+### 2.3. Cómo Medir la Complejidad
 
 1. **Contar Operaciones Básicas**: Identificar las operaciones más significativas y cómo su número crece con n.
 2. **Análisis de Bucles**:
@@ -77,7 +77,7 @@ La **notación Big O** es una forma matemática de describir el rendimiento o la
    * Un bucle anidado (un bucle dentro de otro) que itera n veces cada uno suele ser O(n²).
 3. **Recurrencias**: Analizar algoritmos recursivos mediante ecuaciones de recurrencia.
 
-#### 2.4. Representación Gráfica de la Complejidad
+### 2.4. Representación Gráfica de la Complejidad
 
 Aunque no podemos mostrar gráficos aquí, podemos describir cómo diferentes complejidades se comportan gráficamente:
 
@@ -89,11 +89,11 @@ Aunque no podemos mostrar gráficos aquí, podemos describir cómo diferentes co
 
 ***
 
-### 3. Algoritmos de Ordenamiento
+## 3. Algoritmos de Ordenamiento
 
 Los algoritmos de ordenamiento organizan elementos en una secuencia específica (por ejemplo, numérica o alfabética).
 
-#### 3.1. Bubble Sort (Ordenamiento de Burbuja)
+### 3.1. Bubble Sort (Ordenamiento de Burbuja)
 
 **Descripción**
 
@@ -136,7 +136,7 @@ En el peor caso, el algoritmo necesita hacer n² comparaciones. En el mejor caso
 
 ***
 
-#### 3.2. Selection Sort (Ordenamiento por Selección)
+### 3.2. Selection Sort (Ordenamiento por Selección)
 
 **Descripción**
 
@@ -175,7 +175,7 @@ Siempre realiza n² comparaciones, independientemente del estado inicial de la l
 
 ***
 
-#### 3.3. Insertion Sort (Ordenamiento por Inserción)
+### 3.3. Insertion Sort (Ordenamiento por Inserción)
 
 **Descripción**
 
@@ -214,7 +214,7 @@ En el mejor caso, solo realiza n comparaciones. En el peor caso, como una lista 
 
 ***
 
-#### 3.4. Merge Sort (Ordenamiento por Mezcla)
+### 3.4. Merge Sort (Ordenamiento por Mezcla)
 
 **Descripción**
 
@@ -283,7 +283,7 @@ Divide el array repetidamente y luego los combina, resultando en una complejidad
 
 ***
 
-#### 3.5. Quick Sort (Ordenamiento Rápido)
+### 3.5. Quick Sort (Ordenamiento Rápido)
 
 **Descripción**
 
@@ -336,9 +336,9 @@ En el mejor caso, divide el array en partes casi iguales, resultando en O(n log 
 
 ***
 
-### 4. Algoritmos de Búsqueda
+## 4. Algoritmos de Búsqueda
 
-#### 4.1. Búsqueda Lineal
+### 4.1. Búsqueda Lineal
 
 **Descripción**
 
@@ -365,7 +365,7 @@ public class BusquedaLineal {
 
 ***
 
-#### 4.2. Búsqueda Binaria
+### 4.2. Búsqueda Binaria
 
 **Descripción**
 
@@ -400,9 +400,9 @@ public class BusquedaBinaria {
 
 ***
 
-### 5. Estructuras de Datos Básicas
+## 5. Estructuras de Datos Básicas
 
-#### 5.1. Pilas (Stacks)
+### 5.1. Pilas (Stacks)
 
 **Descripción**
 
@@ -427,7 +427,7 @@ public class PilaEjemplo {
 
 ***
 
-#### 5.2. Colas (Queues)
+### 5.2. Colas (Queues)
 
 **Descripción**
 
@@ -453,7 +453,7 @@ public class ColaEjemplo {
 
 ***
 
-#### 5.3. Listas Enlazadas
+### 5.3. Listas Enlazadas
 
 **Descripción**
 
@@ -492,7 +492,7 @@ public class ListaEnlazada {
 
 ***
 
-#### 5.4. Árboles Binarios
+### 5.4. Árboles Binarios
 
 **Descripción**
 
@@ -535,9 +535,9 @@ public class ArbolBinario {
 
 ***
 
-### 6. Algoritmos Avanzados
+## 6. Algoritmos Avanzados
 
-#### 6.1. Algoritmo de Dijkstra
+### 6.1. Algoritmo de Dijkstra
 
 **Descripción**
 
@@ -594,7 +594,7 @@ public class Dijkstra {
 
 ***
 
-#### 6.2. Programación Dinámica
+### 6.2. Programación Dinámica
 
 **Descripción**
 
@@ -606,15 +606,15 @@ Debido a la extensión, se recomienda investigar este algoritmo por separado.
 
 ***
 
-### 7. Buenas Prácticas y Consejos
+## 7. Buenas Prácticas y Consejos
 
-#### 7.1. Análisis de Algoritmos
+### 7.1. Análisis de Algoritmos
 
 * **Comprender el problema**: Antes de elegir un algoritmo, entiende completamente el problema.
 * **Elegir el algoritmo adecuado**: Considera la complejidad y el contexto.
 * **Probar con diferentes entradas**: Especialmente casos extremos y grandes n.
 
-#### 7.2. Optimización de Código
+### 7.2. Optimización de Código
 
 * **Evitar bucles innecesarios**: Reduce la complejidad al mínimo necesario.
 * **Usar estructuras de datos adecuadas**: Pueden mejorar significativamente el rendimiento.
@@ -622,15 +622,15 @@ Debido a la extensión, se recomienda investigar este algoritmo por separado.
 
 ***
 
-### 8. Conclusión
+## 8. Conclusión
 
-#### 8.1. Pasos Siguientes
+### 8.1. Pasos Siguientes
 
 * **Practicar**: Implementa los algoritmos y analiza su complejidad.
 * **Estudiar Algoritmos Avanzados**: Como árboles balanceados, grafos, algoritmos de búsqueda avanzada.
 * **Participar en Competencias**: Ayuda a mejorar habilidades y aprender nuevos algoritmos.
 
-#### 8.2. Recursos Adicionales
+### 8.2. Recursos Adicionales
 
 * **Libros**:
   * _"Introduction to Algorithms"_ por Cormen, Leiserson, Rivest y Stein.
