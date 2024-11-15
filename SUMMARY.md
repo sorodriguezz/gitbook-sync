@@ -8,6 +8,7 @@
 * [Jasper Report y SpringBoot 3](spring/jasper-report-y-springboot-3.md)
 * [Spring Security 6](spring/spring-security-6.md)
 * [Spring Cloud Config](spring/spring-cloud-config.md)
+* [Integración Springdoc OpenAPI en Spring Boot 3.X](spring/integracion-springdoc-openapi-en-spring-boot-3.x.md)
 
 ## 🔴 Angular
 
