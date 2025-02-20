@@ -30,3 +30,7 @@
 * [Patrones de Arquitectura con Java](patrones/patrones-de-arquitectura-con-java.md)
 * [Algoritmos y Complejidad Computacional con Java](patrones/algoritmos-y-complejidad-computacional-con-java.md)
 * [Patrón DTO vs Patrón DAO](patrones/patron-dto-vs-patron-dao.md)
+
+## 🖥️ Otros
+
+* [Funcionamiento memoria  en Java](otros/funcionamiento-memoria-en-java.md)
