@@ -58,19 +58,19 @@ Para CMD o PowerShell:
 ng build --configuration production --base-href "/nombre-repositorio/"
 ```
 
-Esto nos generará un directorio /dist en la raiz de nuestro proyecto, con nuestro index.html apuntando a la ruta que expone GitHub Pages.&#x20;
+Esto nos generará un directorio `/dist` en la raiz de nuestro proyecto, con nuestro index.html apuntando a la ruta que expone GitHub Pages.&#x20;
 
-Como mencioné, en las nuevas versiones crea todo este codigo JS en un directorio /browser. En las versiones 9 y 12 por ejemplo lo crea directorio sobre el directorio /dist. (Siempre dentro de un directorio con el mismo nombre del proyecto)
+Como mencioné, en las nuevas versiones crea todo este codigo JS en un directorio `/browser`. En las versiones 9 y 12 por ejemplo lo crea directorio sobre el directorio `/dist`. (Siempre dentro de un directorio con el mismo nombre del proyecto)
 
-Para continuar, creamos un directorio llamado /docs dentro de nuestro proyecto y movemos todos los archivos de nuestro /browser a nuestro /docs. O usar el comando que sigue para realizar todos los pasos a la vez:
+Para continuar, creamos un directorio llamado /docs dentro de nuestro proyecto y movemos todos los archivos de nuestro `/browser` a nuestro `/docs`. O usar el comando que sigue para realizar todos los pasos a la vez:
 
 ```bash
 mkdir docs && mv dist/nombre_proyecto/browser/* docs && rm -rf dist
 ```
 
-&#x20;Con este comando creamos el directorio docs, movemos todos los archivos de /browser dentro de docs y final mente eliminamos el directorio /dist. (Esto ultimo en caso de no querer este directorio)
+&#x20;Con este comando creamos el directorio `/docs`, movemos todos los archivos de `/browser` dentro de docs y final mente eliminamos el directorio `/dist`. (Esto ultimo en caso de no querer este directorio)
 
-Una vez realizado, subimos nuestro proyecto a GitHub donde deberia estar nuestro directorio /docs.
+Una vez realizado, subimos nuestro proyecto a GitHub donde deberia estar nuestro directorio `/docs`.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -90,7 +90,44 @@ Para ver el nombre de nuestra ruta, en el mismo apartado de GitHub Pages aparece
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
+### Despliegue por rama
 
+Una vez creado y configurado el proyecto. Lo subimos a un repositorio de GitHub. Ahora para hacer el deploy en Pages, necesitamos seguir los siguientes pasos:
 
+Instalar el CLI de GitHub Pages para Angular:
 
+```bash
+npm install angular-cli-ghpages --save-dev
+# o si quieres de manera global (instalra en el node_modules de tu equipo) usar:
+npm install -g angular-cli-ghpages
+```
+
+Ahora ejecutaremos el comando:
+
+```bash
+MSYS_NO_PATHCONV=1 ng deploy --base-href /nombre-repositorio/
+# o ejecutar para otros terminales que no sean Git Bash
+ng deploy --base-href /nombre-repositorio/
+```
+
+> **NOTA**: Al ejecutar el deploy por primera vez, preguntará si deseas agregarlo a angular.json y donde lo desplegaras. En este caso es GitHub Pages. Luego volvemos a ejecutar el comando, donde finalmente creará la rama y la publicará en el repositorio.
+
+Esto creará automaticamente nuestro codigo transpilado, creará un rama con todo este codigo la cual se llamará "gh-pages" por defecto y subirá a GitHub donde se lanzará un pipeline que publique en Pages.
+
+De igual manera puedes consultar la documentacion de [angular-cli-ghpages](https://www.npmjs.com/package/angular-cli-ghpages), donde puedes cambiar el nombre de la rama o configurar el deploy como quieras.
+
+Opcional: Como último paso, podemos agregar el comando de deploy en nuestros scripts del package.json de la siguiente manera:
+
+```json
+"scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "deploy": "ng deploy  --base-href /nombre-repositorio/"
+},
+```
+
+Ahora solo usarás el comando `npm run deploy` y hará el deploy automatico.
 
