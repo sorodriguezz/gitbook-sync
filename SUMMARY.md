@@ -13,6 +13,7 @@
 ## 🔴 Angular
 
 * [Crear librería Angular](angular/crear-libreria-angular.md)
+* [Recibir correos con Angular](angular/recibir-correos-con-angular.md)
 * [Desplegar Angular en GitHub Page](angular/desplegar-angular-en-github-page.md)
 
 ## ⭕ NestJS
