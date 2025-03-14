@@ -6,21 +6,24 @@ description: >-
 
 # Funcionamiento memoria  en Java
 
-**Gestión de Memoria en Java: Stack y Heap**
+## **Gestión de Memoria en Java: Stack y Heap**
 
 Java, al igual que otras plataformas, utiliza un modelo de memoria basado en dos regiones principales: **Stack** (pila) y **Heap**.
 
-* **Stack**:
-  * Es una región de memoria donde se almacenan los **identificadores** (nombres de variables) y sus **valores**.
-  * Cuando se crean variables primitivas (ej., `int a = 500`), su valor se almacena directamente en el stack.
-  * En el caso de objetos, el stack almacena una **referencia** (dirección de memoria) hacia el objeto en el Heap.
-  * Cuando se comparan variables primitivas con el operador `==`, se compara el valor directamente en el stack.
-* **Heap**:
-  * Es una región de memoria donde se crean dinámicamente los **objetos** durante la ejecución del programa.
-  * Dentro del Heap, hay áreas reservadas para objetivos específicos (ej: Integer cache, String pool).
-  * Cuando se comparan objetos con el operador `==`, se comparan las direcciones de memoria (referencias).
+### **Stack**
 
-**Comportamiento con Objetos**
+* Es una región de memoria donde se almacenan los **identificadores** (nombres de variables) y sus **valores**.
+* Cuando se crean variables primitivas (ej., `int a = 500`), su valor se almacena directamente en el stack.
+* En el caso de objetos, el stack almacena una **referencia** (dirección de memoria) hacia el objeto en el Heap.
+* Cuando se comparan variables primitivas con el operador `==`, se compara el valor directamente en el stack.
+
+### **Heap**
+
+* Es una región de memoria donde se crean dinámicamente los **objetos** durante la ejecución del programa.
+* Dentro del Heap, hay áreas reservadas para objetivos específicos (ej: Integer cache, String pool).
+* Cuando se comparan objetos con el operador `==`, se comparan las direcciones de memoria (referencias).
+
+## **Comportamiento con Objetos**
 
 Cuando se trabaja con objetos, el comportamiento de stack y heap es diferente:
 
@@ -28,7 +31,7 @@ Cuando se trabaja con objetos, el comportamiento de stack y heap es diferente:
 * Al comparar dos objetos con `==`, se comparan las referencias, no el contenido de los objetos. Por lo tanto, dos objetos con el mismo contenido pueden no ser iguales si están en diferentes ubicaciones de memoria.
 * Para comparar el contenido de los objetos, se utiliza el método `equals()`. Este método compara el valor interno de los objetos en lugar de su dirección de memoria.
 
-**Integer Cache**
+### **Integer Cache**
 
 Existe una excepción al comportamiento regular de los objetos:
 
@@ -36,7 +39,7 @@ Existe una excepción al comportamiento regular de los objetos:
 * En este rango, en lugar de crear nuevos objetos en el heap, las referencias apuntan a objetos existentes en el Integer Cache, por razones de eficiencia.
 * Para forzar la creación de un nuevo objeto `Integer` fuera del caché, se debe utilizar la palabra clave `new`.
 
-**Strings**
+### **Strings**
 
 Los strings tienen un comportamiento especial en Java:
 
@@ -45,7 +48,7 @@ Los strings tienen un comportamiento especial en Java:
 * Para forzar la creación de un nuevo objeto String fuera del String Pool, se debe utilizar la palabra clave `new`.
 * Los strings en Java son inmutables. Esto significa que cada vez que se modifica un string, se crea un nuevo objeto en el String Pool.
 
-**Objetos Creados por el Usuario**
+### **Objetos Creados por el Usuario**
 
 Cuando se crean objetos a partir de clases definidas por el usuario:
 
@@ -55,7 +58,7 @@ Cuando se crean objetos a partir de clases definidas por el usuario:
 * Por defecto, el método `equals()` compara las direcciones de memoria de los objetos.
 * Para comparar el contenido de los objetos, se debe **sobreescribir** (override) el método `equals()` en la clase.
 
-**Consideraciones Finales**
+## **Consideraciones Finales**
 
 * Es crucial conocer las reglas de gestión de memoria en Java para evitar comportamientos inesperados.
 * Al comparar objetos, se debe tener en cuenta si se está comparando la referencia o el contenido.

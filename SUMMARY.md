@@ -9,6 +9,8 @@
 * [Spring Security 6](spring/spring-security-6.md)
 * [Spring Cloud Config](spring/spring-cloud-config.md)
 * [Integración Springdoc OpenAPI en Spring Boot 3.X](spring/integracion-springdoc-openapi-en-spring-boot-3.x.md)
+* [Principales componentes Spring MVC](spring/principales-componentes-spring-mvc.md)
+* [Anotaciones esenciales Spring Framework](spring/anotaciones-esenciales-spring-framework.md)
 
 ## 🔴 Angular
 
@@ -36,3 +38,6 @@
 ## 🖥️ Otros
 
 * [Funcionamiento memoria  en Java](otros/funcionamiento-memoria-en-java.md)
+* [Excepciones en Java: Tipos, características y ejemplos](otros/excepciones-en-java-tipos-caracteristicas-y-ejemplos.md)
+* [Recolector de basura (GC) en Java](otros/recolector-de-basura-gc-en-java.md)
+* [Principios de tipos de memoria en Java](otros/principios-de-tipos-de-memoria-en-java.md)
