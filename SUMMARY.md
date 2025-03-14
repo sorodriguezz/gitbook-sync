@@ -41,3 +41,5 @@
 * [Excepciones en Java: Tipos, características y ejemplos](otros/excepciones-en-java-tipos-caracteristicas-y-ejemplos.md)
 * [Recolector de basura (GC) en Java](otros/recolector-de-basura-gc-en-java.md)
 * [Principios de tipos de memoria en Java](otros/principios-de-tipos-de-memoria-en-java.md)
+* [Tipos de serialización en Java](otros/tipos-de-serializacion-en-java.md)
+* [Principios de ingeniera de Software](otros/principios-de-ingeniera-de-software.md)
