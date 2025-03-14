@@ -155,7 +155,7 @@ No recurrir a microservicios y colas de mensajería avanzadas si una aplicación
 
 ***
 
-### Stable Abstractions Principle
+## Stable Abstractions Principle
 
 ### **Explicación**
 
