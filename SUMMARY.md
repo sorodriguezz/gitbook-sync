@@ -41,3 +41,4 @@
   * [Node.js no es de un solo hilo](node/node.js-no-es-de-un-solo-hilo.md)
 * [⚫ Otros](otros/README.md)
   * [Ventajas y desventajas entre Brokers](otros/ventajas-y-desventajas-entre-brokers.md)
+  * [¿Deberían las API utilizar 404 como código de error?](otros/deberian-las-api-utilizar-404-como-codigo-de-error.md)
