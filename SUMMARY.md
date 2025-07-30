@@ -29,6 +29,7 @@
   * [Hacer debug en Nest](nest/hacer-debug-en-nest.md)
   * [Envio de correo NestJS](nest/envio-de-correo-nestjs.md)
   * [Dockerizar Aplicación](nest/dockerizar-aplicacion.md)
+  * [Config Server con NestJS](nest/config-server-con-nestjs.md)
 * [📢 Patrones](patrones/README.md)
   * [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
   * [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)
