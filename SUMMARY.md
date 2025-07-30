@@ -30,6 +30,7 @@
   * [Envio de correo NestJS](nest/envio-de-correo-nestjs.md)
   * [Dockerizar Aplicación](nest/dockerizar-aplicacion.md)
   * [Config Server con NestJS](nest/config-server-con-nestjs.md)
+  * [Config Client en NestJS](nest/config-client-en-nestjs.md)
 * [📢 Patrones](patrones/README.md)
   * [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
   * [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)

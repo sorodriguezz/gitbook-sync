@@ -289,4 +289,4 @@ El cliente proporciona una interfaz sencilla para obtener configuraciones y se i
 
 ### Repositorio de Config Server
 
-[https://github.com/sorodriguezz/config-server](https://github.com/sorodriguezz/config-server)
+{% embed url="https://github.com/sorodriguezz/config-server" %}
