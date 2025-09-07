@@ -31,7 +31,7 @@ cd redis-cache-example
 A continuación, necesitaremos instalar algunos paquetes para Redis y almacenamiento en caché:
 
 ```bash
-npm install cache-manager cache-manager-redis-store redis
+npm install cache-manager cache-manager-redis-store @nestjs/cache-manager
 ```
 
 ## Integración de Redis con NestJS <a href="#heading-integrating-redis-with-nestjs" id="heading-integrating-redis-with-nestjs"></a>
@@ -41,24 +41,26 @@ npm install cache-manager cache-manager-redis-store redis
 Primero, necesitamos configurar CacheModule en nuestro `app.module.ts`archivo para usar Redis:
 
 ```typescript
-import { Module, CacheModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import * as redisStore from 'cache-manager-redis-store';
+import { redisStore } from 'cache-manager-redis-store';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
   imports: [
     CacheModule.register({
       store: redisStore,
       host: 'localhost', // Redis server host
-      port: 6379,        // Redis server port
-      ttl: 600,          // Time to live (seconds)
+      port: 6379, // Redis server port
+      ttl: 600, // Time to live (seconds)
     }),
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
+
 ```
 
 Aquí, configuramos CacheModule para usar Redis como nuestro almacén de caché, especificando el host y el puerto donde se ejecuta Redis. También establecemos un tiempo de vida (TTL) de 600 segundos para los datos almacenados en caché.
@@ -68,9 +70,9 @@ Aquí, configuramos CacheModule para usar Redis como nuestro almacén de caché,
 Ahora, usemos la caché en nuestro servicio. Inyectaremos el administrador de caché y lo usaremos para almacenar datos en caché. Aquí hay un ejemplo en `app.service.ts`:
 
 ```typescript
-import { Injectable, Inject } from '@nestjs/common';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { Cache } from 'cache-manager';
+import { Inject, Injectable } from '@nestjs/common';
+import type { Cache } from 'cache-manager';
 
 @Injectable()
 export class AppService {
@@ -82,7 +84,7 @@ export class AppService {
 
     if (!cachedData) {
       cachedData = 'Hello World!';
-      await this.cacheManager.set(cacheKey, cachedData, { ttl: 600 }); // Cache for 10 minutes
+      await this.cacheManager.set(cacheKey, cachedData, 600); // Cache for 10 minutes
     }
 
     return cachedData;
