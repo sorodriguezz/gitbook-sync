@@ -276,3 +276,7 @@ Para aprovechar al máximo el patrón Event Emitter en NestJS, es importante seg
 Las arquitecturas basadas en eventos ofrecen una forma eficaz de crear aplicaciones escalables y fáciles de mantener mediante la desvinculación de diferentes componentes. El emisor de eventos de NestJS proporciona una forma sencilla pero flexible de implementar estos patrones. Al emitir y escuchar eventos, se pueden gestionar efectos secundarios como notificaciones, registros y tareas en segundo plano de forma asíncrona, manteniendo la lógica principal de la aplicación limpia y modular.
 
 Ya sea que esté manejando acciones de usuario, notificaciones o flujos de trabajo complejos, el emisor de eventos en NestJS puede mejorar la arquitectura de su aplicación, haciéndola más fácil de mantener y escalable.
+
+## Proyecto de ejemplo:
+
+[https://github.com/sorodriguezz/poc-event-nestjs](https://github.com/sorodriguezz/poc-event-nestjs)
