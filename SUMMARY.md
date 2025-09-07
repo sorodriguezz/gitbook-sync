@@ -33,6 +33,7 @@
   * [Config Client en NestJS](nest/config-client-en-nestjs.md)
   * [Gestionar eventos en NestJS](nest/gestionar-eventos-en-nestjs.md)
   * [Redis en NestJS](nest/redis-en-nestjs.md)
+  * [Configurar GraphQL en NestJS](nest/configurar-graphql-en-nestjs.md)
 * [📢 Patrones](patrones/README.md)
   * [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
   * [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)
