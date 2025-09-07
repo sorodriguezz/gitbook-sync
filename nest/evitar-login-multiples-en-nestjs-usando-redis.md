@@ -4,7 +4,7 @@ description: >-
   múltiples en NestJS mediante Redis.
 ---
 
-# Cómo evitar inicios de sesión múltiples en NestJS usando la caché de Redis
+# Evitar login múltiples en NestJS usando Redis
 
 Evitar múltiples inicios de sesión para un mismo usuario puede ser esencial para la seguridad y para mantener una experiencia de usuario fluida, especialmente en aplicaciones donde la gestión de sesiones y la rendición de cuentas de los usuarios son cruciales. En este documento, exploraremos cómo evitar múltiples inicios de sesión en una aplicación NestJS invalidando sesiones anteriores al iniciar sesión.
 

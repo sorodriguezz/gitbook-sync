@@ -34,7 +34,7 @@
   * [Gestionar eventos en NestJS](nest/gestionar-eventos-en-nestjs.md)
   * [Redis en NestJS](nest/redis-en-nestjs.md)
   * [Configurar GraphQL en NestJS](nest/configurar-graphql-en-nestjs.md)
-  * [Cómo evitar inicios de sesión múltiples en NestJS usando la caché de Redis](nest/como-evitar-inicios-de-sesion-multiples-en-nestjs-usando-la-cache-de-redis.md)
+  * [Evitar login múltiples en NestJS usando Redis](nest/evitar-login-multiples-en-nestjs-usando-redis.md)
 * [📢 Patrones](patrones/README.md)
   * [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
   * [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)
