@@ -35,6 +35,7 @@
   * [Redis en NestJS](nest/redis-en-nestjs.md)
   * [Configurar GraphQL en NestJS](nest/configurar-graphql-en-nestjs.md)
   * [Evitar login múltiples en NestJS usando Redis](nest/evitar-login-multiples-en-nestjs-usando-redis.md)
+  * [CASL con NestJS y JWT](nest/casl-con-nestjs-y-jwt.md)
 * [📢 Patrones](patrones/README.md)
   * [Patrones de Diseño con Java](patrones/patrones-de-diseno-con-java.md)
   * [Patrones de Resiliencia con Java](patrones/patrones-de-resiliencia-con-java.md)
