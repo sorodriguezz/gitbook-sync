@@ -45,6 +45,7 @@
   * [Patrón DTO vs Patrón DAO](patrones/patron-dto-vs-patron-dao.md)
   * [Principios de ingeniera de Software](patrones/principios-de-ingeniera-de-software.md)
 * [🟢 Node](node/README.md)
+  * [Event Loop](node/event-loop.md)
   * [Node.js no es de un solo hilo](node/node.js-no-es-de-un-solo-hilo.md)
 * [⚫ Otros](otros/README.md)
   * [Ventajas y desventajas entre Brokers](otros/ventajas-y-desventajas-entre-brokers.md)
