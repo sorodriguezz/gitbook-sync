@@ -247,9 +247,8 @@ Redis es principalmente una base de datos en memoria de alta velocidad, pero tam
 
 ***
 
-Comparación y Diferencias Clave\
-
-
+Comparación y Diferencias Clave<br>
+-----------------------------------
 
 A continuación se resumen las diferencias principales entre los brokers analizados:
 
