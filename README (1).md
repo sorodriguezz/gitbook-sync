@@ -10,7 +10,7 @@ description: >-
 
 Para comenzar necesitamos descargar Apache Kafka, lo descargaremos desde [aquí](https://kafka.apache.org/quickstart).
 
-<figure><img src=".gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Creamos un directorio en la ruta raíz (en este caso mi directorio será C:\kafka) y descomprimimos nuestro <mark style="color:red;">.tgz</mark> dentro del directorio creado.
 
@@ -321,7 +321,7 @@ Para probar esto debemos tener nuestra consola de consumidor arriba para ver los
 {% hint style="warning" %}
 Una vez levante la aplicación por primera vez creará el tópico y dará un error, entonces apenas lo cree, debemos bajar la aplicación nuevamente y listar los tópicos en Kafka, una vez listados debemos ver el tópico _**messages-topic.**_ Si esta creado volvemos a levantar la aplicación y veremos el mensaje en la consola de la escucha de tópicos.&#x20;
 
-<img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="original">
+<img src=".gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" data-size="original">
 {% endhint %}
 
 

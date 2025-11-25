@@ -96,7 +96,7 @@ Para este caso el puerto interno es el **3000** que es donde esta configurada nu
 {% endhint %}
 
 Ahora se debería ver la aplicación corriendo en la ruta _**localhost:8080**_. El cual se verá como en la siguiente imagen:\
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (6) (1).png>)
 
 Si hay algunos errores, puedes ejecutar el comando para ver los logs del contenedor:
 

@@ -563,13 +563,13 @@ Donde puede realizar muchas configuraciones para las rutas.
 
 Para comenzar agregaremos al diagrama un nuevo filtro, el cual es <mark style="color:purple;">**`JwtTokenValidator`**</mark> , ahora al realizar una petición debe haber un filtro que valide el token para poder registrarlo en el <mark style="color:purple;">**`SECURITY CONTEXT HOLDER`**</mark> .
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Explicación JWT
 
 Para comenzar tenemos la siguiente estructura de un JWT generico para esto usaremos la pagina [www.jwt.io ](https://jwt.io/)donde tenemos como muestra el siguiente token:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Toda la cadena de la izquierda se genera con un algoritmo de encriptación, el cual en este caso usa **`HS256.`** El token se divide en 3 secciones, el cual en el _**header**_ estará la metada e información del token.
 
@@ -603,13 +603,13 @@ security.jwt.user.generator=AUTH0JWT-BACKEND
 
 Para que un usuario pueda ingresar, debe pasar todos los filtros de **`Scurity Filter Chain`**, cada vez que un usuario realiza la petición va a un método llamado **`doFilter()`** el cual contiene lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Este es el listado de cadena de filtros que tiene cada vez que realizamos una petición. Ahora nosotros debemos agregar nuestro filtro haciendo uso de JWT.
 
 Para esto debemos agregar las dependencias de JWT, para esto podemos ir a la pagina [https://jwt.io/libraries](https://jwt.io/libraries) para ver que librerías encontramos para JWT (Seleccionar en el filtro JAVA). Si hacemos clic en el repositorio (en este caso usaremos **`java-jwt`**) de la siguiente manera:
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ingresando al repositorio nos mostrará un README que nos mostrará como se integra y como se llama la dependencia.&#x20;
 
@@ -826,7 +826,7 @@ public record AuthLoginRequest(@NotBlank String username, String password) {
 
 La estructura de nuestros directorios y archivos se debería ver así:
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nuestro servicio de **UserDetailServiceImpl** debe modificarse para tener el siguiente contenido:
 
@@ -945,7 +945,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
 Ahora cada vez que realicemos una petición a otra ruta protegida, debemos generar un token con un usuario registrado de la siguiente manera:
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si intentamos hacer una petición a una ruta protegida nos arrojará 401 como el siguiente ejemplo:
 

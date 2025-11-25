@@ -4,7 +4,7 @@ description: >-
   Este sitio puede tener conexiones a APIs externas o servicios web externos.
 ---
 
-# Deplegar Angular en GitHub Page
+# Desplegar Angular en GitHub Page
 
 ## Instalación y creación proyecto
 
@@ -24,7 +24,7 @@ ng version
 
 El cual deberia mostrar algo como esto:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Para crear el proyecto usaremos el compando:
 
@@ -72,23 +72,23 @@ mkdir docs && mv dist/nombre_proyecto/browser/* docs && rm -rf dist
 
 Una vez realizado, subimos nuestro proyecto a GitHub donde deberia estar nuestro directorio `/docs`.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora vamos a Settings de nuestro proyecto de GitHub y nos vamos a Pages.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 En Pages seleccionamos nuestra rama, que en este caso el proyecto esta en **master**  y como folder seleccionamos /docs.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Luego damos en guardar. Y luego de un rato al terminan el pipeline de GitHub Actions se visualizará nuestro sitio:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para ver el nombre de nuestra ruta, en el mismo apartado de GitHub Pages aparece la ruta y un botón "Visit site".
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Despliegue por rama
 
