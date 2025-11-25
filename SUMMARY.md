@@ -52,3 +52,4 @@
   * [¿Deberían las API utilizar 404 como código de error?](otros/deberian-las-api-utilizar-404-como-codigo-de-error.md)
 * [System Design](system-design/README.md)
   * [Escalabilidad](system-design/escalabilidad.md)
+  * [Disponibilidad](system-design/disponibilidad.md)
