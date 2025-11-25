@@ -54,3 +54,4 @@
   * [Escalabilidad](system-design/escalabilidad.md)
   * [Disponibilidad](system-design/disponibilidad.md)
   * [Fiabilidad](system-design/fiabilidad.md)
+  * [Teorema CAP](system-design/teorema-cap.md)
