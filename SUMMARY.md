@@ -68,6 +68,7 @@
     * [HTTP/HTTPS](system-design/fundamentos-de-redes/http-https.md)
     * [TCP vs UDP](system-design/fundamentos-de-redes/tcp-vs-udp.md)
     * [Load Balancing](system-design/fundamentos-de-redes/load-balancing.md)
+    * [Checksums](system-design/fundamentos-de-redes/checksums.md)
   * [Fundamentos de la API](system-design/fundamentos-de-la-api.md)
   * [Fundamentos de bases de datos](system-design/fundamentos-de-bases-de-datos.md)
   * [Fundamentos del almacenamiento en caché](system-design/fundamentos-del-almacenamiento-en-cache.md)
