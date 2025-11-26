@@ -28,7 +28,7 @@ Para empezar a diseñar el reporte podemos agregar `Static Text` para agregar te
 
 Como en la siguiente imagen:
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * `Static Text`: Este elemento basta con arrastrarlo y soltarlo, agregar el texto que uno quiera y en la pestaña `Properties` cambiar sus propiedades, como agrandar texto, poner color, tipo de texto, etc.
 * `Text Field`: Este componente se arrastra y se pone donde nosotros queramos, ahora antes de usar tenemos que ir a la parte inferior izquierda de la pantalla, en `Outline` e ir a la parte de `Parameters`, luego hacemos clic derecho y presionamos `Create Parameter` y en la parte inferior derecha vamos a las `Properties` y cambiamos el nombre del parametro y su tipo de dato. Una vez configurado el tipo de parámetro, hacemos doble clic sobre el `Text Field` que creamos y vamos a `Parameters` nuevamente y seleccionamos el parámetro que creamos (haciendo doble clic), nos aseguramos que en la parte superior se vea como `$P{amount_paid}`

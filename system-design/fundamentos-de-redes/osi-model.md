@@ -111,4 +111,4 @@ Si bien el modelo OSI es una herramienta teórica potente, el **modelo TCP/IP** 
 
 En sistemas reales, la línea entre capas puede difuminarse. Por ejemplo, **HTTPS** opera técnicamente entre las capas 5 a 7 (Sesión, Presentación, Aplicación), ya que implica las solicitudes de aplicación, el cifrado y el establecimiento de sesiones.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>

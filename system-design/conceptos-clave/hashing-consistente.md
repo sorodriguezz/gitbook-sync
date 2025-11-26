@@ -38,7 +38,7 @@ Este enfoque funciona **siempre que el número de servidores se mantenga constan
 
 A medida que aumenta el tráfico, decide **escalar** agregando un nuevo servidor backend ( `S5`). Ahora, debe modificar la función hash para usar `mod 6`en lugar de , `mod 5` ya que ahora tenemos 6 servidores.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### **Escenario 2: Eliminación de un servidor (S4)**
 
@@ -84,7 +84,7 @@ En lugar de distribuir claves basadas en `Hash(key) mod N`, el hash consistente 
 * A cada **servidor (nodo)** se le asigna una posición en el anillo hash mediante el cálculo `Hash(server_id)`.
 * Utilizando el ejemplo anterior con **5 servidores (** `S0, S1, S2, S3, S4`**)** , la función hash los distribuye en diferentes posiciones alrededor del anillo.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Asignación de claves a servidores**
 
@@ -93,7 +93,7 @@ En lugar de distribuir claves basadas en `Hash(key) mod N`, el hash consistente 
 * Luego nos movemos en el sentido de las agujas del reloj alrededor del anillo hasta que encontramos el siguiente servidor disponible.
 * La clave (o solicitud) se asigna a este servidor para su almacenamiento o recuperación.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 > **Nota:** En caso de que el hash de una clave caiga directamente en la posición de un nodo, pertenece a ese nodo.
 
@@ -105,7 +105,7 @@ Supongamos que agregamos un **nuevo servidor (** `S5`**)** al sistema.
 * `S5`se hace cargo de todas las claves (solicitudes) que se encuentran entre `S1`y `S5`, que antes eran manejadas por `S2`.
   * **Ejemplo:** las solicitudes que originalmente fueron asignadas a ahora serán redirigidas a `User D’s S2,S5.`
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Esto demuestra cómo el hash consistente redistribuye eficientemente las claves con una interrupción mínima, garantizando que solo un pequeño subconjunto de claves se reasigne cuando se agregan nuevos servidores.
 
@@ -116,7 +116,7 @@ Cuando un servidor, como `S4`, falla o se elimina del sistema:
 * Todas las claves asignadas previamente `S4`se reasignan al siguiente servidor disponible en el anillo ( `S3`).
 * Solo es necesario mover las claves (solicitudes) que fueron asignadas , mientras que todas las demás claves permanecen inafectadas.`S4`
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Esto da como resultado un **movimiento mínimo de datos** , a diferencia del hash tradicional, donde eliminar un nodo requeriría reasignar la mayoría de las claves.
 
@@ -148,7 +148,7 @@ S2 → Position 50
 S3 → Position 90
 ```
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Si **S1 falla** , todas sus claves deben reasignarse a **S2** , lo que puede crear una sobrecarga.
 
@@ -166,7 +166,7 @@ S3-2 → Position 90
 S3-3 → Position 140
 ```
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Ahora, en lugar de un solo punto, `S1`se representa en **múltiples posiciones** , lo que hace que la distribución **sea más uniforme** .
 
