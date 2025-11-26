@@ -101,6 +101,6 @@ $ docker compose -f docker/docker-compose-mysql.yml up -d
 
 ### Diagrama de componentes
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Enlace de los videos seguidos: [Youtube](https://www.youtube.com/watch?v=-ksmE3KoX9U\&list=PL145AyWAbMDhwUbBL74s1D2ZV9EqBaQ1t)

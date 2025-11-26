@@ -563,13 +563,13 @@ Donde puede realizar muchas configuraciones para las rutas.
 
 Para comenzar agregaremos al diagrama un nuevo filtro, el cual es <mark style="color:purple;">**`JwtTokenValidator`**</mark> , ahora al realizar una petición debe haber un filtro que valide el token para poder registrarlo en el <mark style="color:purple;">**`SECURITY CONTEXT HOLDER`**</mark> .
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Explicación JWT
 
 Para comenzar tenemos la siguiente estructura de un JWT generico para esto usaremos la pagina [www.jwt.io ](https://jwt.io/)donde tenemos como muestra el siguiente token:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Toda la cadena de la izquierda se genera con un algoritmo de encriptación, el cual en este caso usa **`HS256.`** El token se divide en 3 secciones, el cual en el _**header**_ estará la metada e información del token.
 
@@ -603,7 +603,7 @@ security.jwt.user.generator=AUTH0JWT-BACKEND
 
 Para que un usuario pueda ingresar, debe pasar todos los filtros de **`Scurity Filter Chain`**, cada vez que un usuario realiza la petición va a un método llamado **`doFilter()`** el cual contiene lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Este es el listado de cadena de filtros que tiene cada vez que realizamos una petición. Ahora nosotros debemos agregar nuestro filtro haciendo uso de JWT.
 

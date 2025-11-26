@@ -56,3 +56,6 @@
   * [Fiabilidad](system-design/fiabilidad.md)
   * [Teorema CAP](system-design/teorema-cap.md)
   * [Hashing consistente](system-design/hashing-consistente.md)
+  * [SPOF](system-design/spof.md)
+  * [Failover](system-design/failover.md)
+  * [Fault Tolerance](system-design/fault-tolerance.md)
