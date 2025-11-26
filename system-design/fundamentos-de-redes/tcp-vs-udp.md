@@ -1,4 +1,4 @@
-# Page
+# TCP vs UDP
 
 Cuando envía un mensaje de WhatsApp, transmite un video de YouTube o juega un juego en línea, su dispositivo se basa en un conjunto de reglas para mover datos a través de Internet.
 
