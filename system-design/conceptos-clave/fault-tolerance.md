@@ -10,7 +10,7 @@ La tolerancia a fallos describe la capacidad de un sistema para gestionar errore
 
 Por ejemplo, a continuación se muestra una demostración sencilla de la tolerancia a fallos comparativa en la capa de base de datos. En el diagrama a continuación, la Aplicación 1 está conectada a una sola instancia de base de datos. La Aplicación 2 está conectada a dos instancias de base de datos: la base de datos principal y una réplica en espera.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 21.04.26.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 21.04.26.png" alt="" width="375"><figcaption></figcaption></figure>
 
 En este escenario, la Aplicación 2 es más tolerante a fallos. Si su base de datos principal se desconecta, puede cambiar a la réplica en espera y seguir funcionando con normalidad.
 
@@ -88,7 +88,7 @@ Esto no significa que CockroachDB ni _ninguna_ herramienta o plataforma específ
 
 Hay muchas formas de lograr tolerancia a fallas, pero veamos un enfoque muy común para las aplicaciones modernas: adoptar una arquitectura multirregional basada en la nube construida alrededor de servicios de contenedorización como Kubernetes.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 21.10.44.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 21.10.44.png" alt=""><figcaption></figcaption></figure>
 
 _Ejemplo de una arquitectura multirregional con tolerancia a fallos. Haga clic para ampliar._
 

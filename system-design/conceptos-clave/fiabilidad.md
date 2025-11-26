@@ -64,7 +64,7 @@ Configurar múltiples instancias de componentes críticos.
 
 Por ejemplo, si tiene un servidor web que maneja solicitudes de usuarios, implemente varios servidores detrás de un balanceador de carga:
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.20.35.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.20.35.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Si un servidor falla, el balanceador de carga enruta automáticamente el tráfico a los servidores restantes.
 
@@ -72,7 +72,7 @@ Si un servidor falla, el balanceador de carga enruta automáticamente el tráfic
 
 Asegúrese de que sus datos no se almacenen en una única ubicación. Utilice estrategias de replicación de datos en múltiples bases de datos o centros de datos.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.21.12.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.21.12.png" alt="" width="375"><figcaption></figcaption></figure>
 
 De esta manera, si una base de datos falla, el sistema aún puede acceder a una copia desde otra ubicación.
 

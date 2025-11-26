@@ -12,7 +12,7 @@ En este artículo, exploraremos diferentes formas en que un sistema puede crecer
 
 Un sistema puede crecer en varias dimensiones.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 19.58.04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 19.58.04.png" alt=""><figcaption></figcaption></figure>
 
 ### **1. Crecimiento de la base de usuarios**
 
@@ -50,7 +50,7 @@ A continuación se muestran 10 formas comunes de hacer que un sistema sea escala
 
 ### 1. Escalado vertical (escalamiento vertical) <a href="#id-1-vertical-scaling-scale-up" id="id-1-vertical-scaling-scale-up"></a>
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.02.14.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.02.14.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Esto significa agregar más potencia a sus máquinas existentes actualizando el servidor con más RAM, CPU más rápidas o almacenamiento adicional.
 
@@ -58,7 +58,7 @@ Es un buen enfoque para arquitecturas más simples, pero tiene limitaciones en c
 
 ### 2. Escalamiento horizontal (escalamiento horizontal) <a href="#id-2-horizontal-scaling-scale-out" id="id-2-horizontal-scaling-scale-out"></a>
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.03.09.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.03.09.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Esto significa agregar más máquinas a su sistema para distribuir la carga de trabajo entre múltiples servidores.
 
@@ -68,7 +68,7 @@ A menudo se considera la forma más eficaz de escalar sistemas grandes.
 
 ### 3. Equilibrio de carga <a href="#id-3-load-balancing" id="id-3-load-balancing"></a>
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.05.27.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.05.27.png" alt="" width="375"><figcaption></figcaption></figure>
 
 El equilibrio de carga es el proceso de distribuir el tráfico entre múltiples servidores para garantizar que ningún servidor se sature.
 
@@ -76,7 +76,7 @@ El equilibrio de carga es el proceso de distribuir el tráfico entre múltiples 
 
 ### 4. Almacenamiento en caché
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.06.31.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.06.31.png" alt="" width="375"><figcaption></figcaption></figure>
 
 El almacenamiento en caché es una técnica para almacenar datos a los que se accede con frecuencia en la memoria (como RAM) para reducir la carga en el servidor o la base de datos.
 
@@ -92,7 +92,7 @@ La CDN distribuye recursos estáticos (imágenes, vídeos, etc.) más cerca de l
 
 ### 6. Fragmentación
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.07.52.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.07.52.png" alt="" width="375"><figcaption></figcaption></figure>
 
 La fragmentación significa dividir datos o funcionalidades entre múltiples nodos/servidores para distribuir la carga de trabajo y evitar cuellos de botella.
 
@@ -108,7 +108,7 @@ Esto garantiza que su aplicación principal siga respondiendo a los usuarios.
 
 ### 8. Arquitectura de microservicios <a href="#id-8-microservices-architecture" id="id-8-microservices-architecture"></a>
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.09.12.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.09.12.png" alt="" width="375"><figcaption></figcaption></figure>
 
 La arquitectura de microservicios divide la aplicación en servicios más pequeños e independientes que pueden escalarse de forma independiente.
 
@@ -118,7 +118,7 @@ Esto mejora la resiliencia y permite que los equipos trabajen en componentes esp
 
 ### 9. Escalado automático <a href="#id-9-auto-scaling" id="id-9-auto-scaling"></a>
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.09.57.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.09.57.png" alt="" width="375"><figcaption></figcaption></figure>
 
 El escalamiento automático significa ajustar automáticamente la cantidad de servidores activos en función de la carga actual.
 

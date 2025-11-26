@@ -72,7 +72,7 @@ mkdir docs && mv dist/nombre_proyecto/browser/* docs && rm -rf dist
 
 Una vez realizado, subimos nuestro proyecto a GitHub donde deberia estar nuestro directorio `/docs`.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora vamos a Settings de nuestro proyecto de GitHub y nos vamos a Pages.
 

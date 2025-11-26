@@ -2,7 +2,7 @@
 
 El **teorema CAP** , introducido por Eric Brewer en 2000, proporciona un marco fundamental para comprender las **compensaciones** que deben hacerse al diseñar sistemas distribuidos.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.25.07.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.25.07.png" alt="" width="375"><figcaption></figcaption></figure>
 
 CAP significa **Consistencia** , **Disponibilidad** y **Tolerancia de Partición** , y el teorema establece que:
 
@@ -20,7 +20,7 @@ En este artículo, exploraremos los tres pilares del teorema CAP, las compensaci
 
 La consistencia garantiza que **cada lectura reciba la escritura más reciente o un error** . Esto significa que todos los nodos activos en un sistema distribuido devolverán los mismos datos en cualquier momento.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.26.54.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.26.54.png" alt="" width="375"><figcaption></figcaption></figure>
 
 > En un sistema distribuido consistente, si escribe datos en el nodo A, una operación de lectura del nodo B reflejará inmediatamente la operación de escritura en el nodo A.
 
@@ -30,7 +30,7 @@ La coherencia es crucial para las aplicaciones en las que es fundamental dispone
 
 La disponibilidad garantiza que **cada solicitud (de lectura o escritura) reciba una respuesta** , sin necesidad de garantizar que contenga la escritura más reciente. Esto significa que el sistema permanece **operativo** y **con capacidad de respuesta** , incluso si la respuesta de algunos nodos no refleja los datos más actualizados.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.27.49.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.27.49.png" alt="" width="375"><figcaption></figcaption></figure>
 
 La disponibilidad es importante para las aplicaciones que necesitan permanecer operativas en todo momento, como los sistemas de venta minorista en línea.
 
@@ -38,7 +38,7 @@ La disponibilidad es importante para las aplicaciones que necesitan permanecer o
 
 La tolerancia a particiones significa que el **sistema continúa funcionando a pesar de las particiones de red** donde los nodos no pueden comunicarse entre sí.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.28.35.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.28.35.png" alt="" width="375"><figcaption></figcaption></figure>
 
 > Una **partición de red** ocurre cuando una falla de red hace que un sistema distribuido se divida en dos o más grupos de nodos que no pueden comunicarse entre sí.
 

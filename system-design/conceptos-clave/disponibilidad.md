@@ -20,7 +20,7 @@ Availability = Uptime / (Uptime + Downtime)
 
 La disponibilidad suele expresarse en  `"nines"`. Cuanto mayor sea la disponibilidad, menor será el tiempo de inactividad.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.12.54.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.12.54.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Cada "nueve" adicional representa una mejora de un orden de magnitud en la disponibilidad.
 
@@ -32,7 +32,7 @@ Cada "nueve" adicional representa una mejora de un orden de magnitud en la dispo
 
 La redundancia implica tener componentes de respaldo que puedan tomar el control cuando los componentes principales fallan.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.14.24.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.14.24.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Técnicas:**
 
@@ -44,7 +44,7 @@ La redundancia implica tener componentes de respaldo que puedan tomar el control
 
 El equilibrio de carga distribuye el tráfico de red entrante entre múltiples servidores para garantizar que ningún servidor se convierta en un cuello de botella, mejorando así tanto el rendimiento como la disponibilidad.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.15.20.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.15.20.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Técnicas:**
 
@@ -55,7 +55,7 @@ El equilibrio de carga distribuye el tráfico de red entrante entre múltiples s
 
 Los mecanismos de conmutación por error cambian automáticamente a un sistema redundante cuando se detecta una falla.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.16.09.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.16.09.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Técnicas:**
 
@@ -66,7 +66,7 @@ Los mecanismos de conmutación por error cambian automáticamente a un sistema r
 
 La replicación de datos implica copiar datos de una ubicación a otra para garantizar que estén disponibles incluso si una ubicación falla.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.16.59.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.16.59.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Técnicas:**
 
@@ -77,7 +77,7 @@ La replicación de datos implica copiar datos de una ubicación a otra para gara
 
 La monitorización continua de la salud implica verificar el estado de los componentes del sistema para detectar fallas de manera temprana y activar alertas para tomar medidas inmediatas.
 
-<figure><img src="../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.17.43.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Captura de pantalla 2025-11-25 a la(s) 20.17.43.png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Técnicas:**
 
