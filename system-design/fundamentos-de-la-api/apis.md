@@ -447,16 +447,3 @@ Una vez que obtienes datos de una API, puedes  **mostrarlos dinámicamente en un
 * Obtenga datos meteorológicos en vivo desde la API.
 * Analizar y extraer detalles relevantes (temperatura, humedad, condición).
 * Muestra el informe meteorológico en un formato fácil de usar.
-
-
-
-
-
-
-
-
-
-
-
-
-
