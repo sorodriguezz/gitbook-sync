@@ -2,7 +2,7 @@
 
 Para hacer debug en VSCode, necesitamos crear una carpeta en la raiz del proyecto que se llame “**.vscode**“. Si posee la extensión de “**material icon**” de vscode se mostrará de la siguiente manera:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Dentro de esta carpeta crear un archivo llamado “**launch.json**“, el cual debería quedar como:
 

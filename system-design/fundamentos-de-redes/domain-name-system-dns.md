@@ -43,13 +43,13 @@ Si el navegador no lo sabe, recurre al sistema operativo de su computadora.
 
 El sistema operativo mantiene su propia caché local de búsquedas de dominio recientes, compartida entre aplicaciones. Si el registro existe aquí, el sistema operativo devuelve la IP y la búsqueda se completa.
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### 3. El solucionador recursivo
 
 Si el sistema operativo no tiene la respuesta, su computadora envía la consulta a un servidor especial llamado **Recursive Resolver** .
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Este solucionador generalmente lo opera su proveedor de servicios de Internet (ISP) o un servicio DNS público como:
 
@@ -63,7 +63,7 @@ La función del solucionador recursivo es realizar todo el trabajo duro de encon
 
 Si el solucionador aún no tiene la respuesta en su caché, comienza su búsqueda en la parte superior de la jerarquía de Internet: los **servidores raíz** .
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Sólo hay 13 conjuntos de estos servidores raíz a nivel mundial (aunque están replicados en cientos de ubicaciones para mayor confiabilidad).
 
@@ -76,7 +76,7 @@ El solucionador ahora se comunica con los servidores TLD. El **servidor TLD** ad
 
 Entonces, el solucionador le pregunta al `.com`servidor TLD: "Oye, ¿dónde puedo encontrar información sobre `google.com`?"
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 El servidor TLD tampoco tiene la dirección IP final. Sin embargo, sabe cuál _es_ el servidor oficial que guarda los registros del `google.com`dominio. Apunta al solucionador al **Servidor de Nombres Autorizado de ese dominio** .
 
