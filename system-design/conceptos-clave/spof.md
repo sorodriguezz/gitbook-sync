@@ -28,7 +28,7 @@ En el diseño del sistema, los SPOF pueden incluir un solo servidor, enlace de r
 
 Veamos un ejemplo de un sistema y varios puntos únicos de fallo en él:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Este sistema tiene un balanceador de carga, dos servidores de aplicaciones, una base de datos y un servidor de caché.
 
@@ -80,7 +80,7 @@ La forma más común de evitar los SPOF es añadir **redundancia** . Redundancia
 
 Los componentes redundantes pueden ser **activos** o **pasivos** . Los componentes activos siempre están en funcionamiento. Los componentes pasivos (en espera) solo se utilizan como respaldo cuando falla el componente activo.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### **2. Equilibrio de carga**
 
@@ -114,7 +114,7 @@ Diseñe aplicaciones que puedan manejar fallas sin bloquearse.
 
 Implementar mecanismos de conmutación por error para cambiar automáticamente a sistemas de respaldo cuando se detecten fallas.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### 6. Monitoreo y alerta
 

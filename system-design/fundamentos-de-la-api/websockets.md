@@ -24,7 +24,7 @@ Sin embargo, en lugar de completar la solicitud y cerrar la conexión, el servid
 
 Después de este protocolo de enlace, se establece una conexión WebSocket y tanto el cliente como el servidor pueden enviarse mensajes entre sí a través de la conexión abierta.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Proceso paso a paso:
 
@@ -73,7 +73,7 @@ Para comprender las ventajas de WebSockets, es útil compararlos con otros méto
 
 ### **Votación:**
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 * **Solicitudes repetidas** : El cliente envía solicitudes repetidas al servidor a intervalos fijos para buscar actualizaciones. Si bien esto puede simular actualizaciones en tiempo real, resulta ineficiente, ya que muchas solicitudes no devuelven datos nuevos.
 * **Latencia** : el sondeo introduce retrasos porque las actualizaciones solo se verifican periódicamente.

@@ -8,7 +8,7 @@ En este artículo, analizaremos 5 de los algoritmos de limitación de velocidad 
 
 ## 1. Token Bucket
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
 
 El algoritmo Token Bucket es uno de los enfoques de limitación de velocidad más populares y ampliamente utilizados debido a su simplicidad y eficacia.
 
@@ -60,7 +60,7 @@ El algoritmo Leaky Bucket es similar a Token Bucket pero se centra en suavizar e
 
 ## 3. Fixed Window Counter
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 El algoritmo Contador de ventana fija divide el tiempo en ventanas fijas y cuenta las solicitudes en cada ventana.
 
@@ -84,7 +84,7 @@ El algoritmo Contador de ventana fija divide el tiempo en ventanas fijas y cuent
 
 ## 4. Sliding Window Log
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 El algoritmo de registro de ventana deslizante mantiene un registro de marcas de tiempo para cada solicitud y lo utiliza para determinar si se debe permitir una nueva solicitud.
 
@@ -112,7 +112,7 @@ El algoritmo de registro de ventana deslizante mantiene un registro de marcas de
 
 ## 5. Sliding Window Counter
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Este algoritmo combina los enfoques del contador de ventana fija y del registro de ventana deslizante para obtener una solución más precisa y eficiente.
 
