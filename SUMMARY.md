@@ -86,6 +86,7 @@
     * [Database Scaling](system-design/fundamentos-de-bases-de-datos/database-scaling.md)
     * [Databases Types](system-design/fundamentos-de-bases-de-datos/databases-types.md)
     * [Bloom Filters](system-design/fundamentos-de-bases-de-datos/bloom-filters.md)
+    * [Database Architectures](system-design/fundamentos-de-bases-de-datos/database-architectures.md)
   * [Fundamentos del almacenamiento en caché](system-design/fundamentos-del-almacenamiento-en-cache.md)
   * [Comunicación asincrónica](system-design/comunicacion-asincronica.md)
   * [Sistemas Distribuidos y Microservicios](system-design/sistemas-distribuidos-y-microservicios.md)
