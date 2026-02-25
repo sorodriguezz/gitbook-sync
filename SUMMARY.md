@@ -1,7 +1,7 @@
 # Table of contents
 
 * [☕ Java](README.md)
-  * [Funcionamiento memoria  en Java](java/funcionamiento-memoria-en-java.md)
+  * [Funcionamiento memoria en Java](java/funcionamiento-memoria-en-java.md)
   * [Excepciones en Java: Tipos, características y ejemplos](java/excepciones-en-java-tipos-caracteristicas-y-ejemplos.md)
   * [Recolector de basura (GC) en Java](java/recolector-de-basura-gc-en-java.md)
   * [Principios de tipos de memoria en Java](java/principios-de-tipos-de-memoria-en-java.md)
@@ -97,6 +97,7 @@
     * [Pub/Sub](system-design/comunicacion-asincronica/pub-sub.md)
     * [Message Queues](system-design/comunicacion-asincronica/message-queues.md)
     * [Change Data Capture (CDC)](system-design/comunicacion-asincronica/change-data-capture-cdc.md)
-  * [Sistemas Distribuidos y Microservicios](system-design/sistemas-distribuidos-y-microservicios.md)
+  * [Sistemas Distribuidos y Microservicios](system-design/sistemas-distribuidos-y-microservicios/README.md)
+    * [Page 1](system-design/sistemas-distribuidos-y-microservicios/page-1.md)
   * [Patrones arquitectónicos](system-design/patrones-arquitectonicos.md)
   * [Compensaciones en el diseño del sistema](system-design/compensaciones-en-el-diseno-del-sistema.md)
