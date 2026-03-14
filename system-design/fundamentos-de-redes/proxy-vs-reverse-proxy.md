@@ -16,7 +16,7 @@ En términos informáticos, un **proxy** (o **proxy de reenvío** ) es un servid
 
 Cuando envías una solicitud, como abrir una página web, el proxy la intercepta, la reenvía al servidor de destino y luego te transmite la respuesta del servidor.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Piense en un servidor proxy como un **intermediario** que se encuentra entre una red privada e Internet pública.
 
@@ -46,7 +46,7 @@ Uno de los usos más comunes de los servidores proxy es **eludir las restriccion
 
 Los servicios de streaming, por ejemplo, suelen ofrecer contenido diferente según la ubicación del usuario. Con un servidor proxy ubicado en la región de destino, puedes acceder a la biblioteca de contenido de esa región como si fueras un usuario local.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Ejemplo:** Supongamos que estás en India y quieres acceder al catálogo estadounidense de una plataforma de streaming (p. ej., Netflix). Al conectarte a un servidor proxy ubicado en EE. UU., tu solicitud a la plataforma de streaming parecerá provenir de EE. UU., lo que te permitirá acceder a su contenido como si estuvieras en EE. UU.

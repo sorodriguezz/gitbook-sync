@@ -42,7 +42,7 @@ Para evitar esto, puedes dividir los datos en **fragmentos más pequeños (fragm
 
 Este proceso se llama **fragmentación de base de datos.**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Distribuir datos de esta manera hace que sea más fácil escalar y manejar más usuarios.
 
@@ -72,7 +72,7 @@ Por ejemplo:
 
 Es inteligente almacenar estos datos a los que se accede con frecuencia en una **capa de almacenamiento más rápida** para acelerar el acceso y reducir la carga en la base de datos.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Esto se conoce como **almacenamiento en caché** y es una opción popular para acelerar las consultas de datos a los que se accede con frecuencia.
 
@@ -88,7 +88,7 @@ En pocas palabras, la replicación de bases de datos implica crear y mantener m�
 
 Estas réplicas se sincronizan con la base de datos original (la primaria), lo que garantiza la consistencia de los datos.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 **Tipos de replicación** :
 

@@ -98,6 +98,7 @@
     * [Message Queues](system-design/comunicacion-asincronica/message-queues.md)
     * [Change Data Capture (CDC)](system-design/comunicacion-asincronica/change-data-capture-cdc.md)
   * [Sistemas Distribuidos y Microservicios](system-design/sistemas-distribuidos-y-microservicios/README.md)
-    * [Page 1](system-design/sistemas-distribuidos-y-microservicios/page-1.md)
+    * [HeartBeats: Cómo los sistemas distribuidos se manten vivos](system-design/sistemas-distribuidos-y-microservicios/heartbeats-como-los-sistemas-distribuidos-se-manten-vivos.md)
+    * [Diseño del sistema: ¿Qué es el Service Discovery?](system-design/sistemas-distribuidos-y-microservicios/diseno-del-sistema-que-es-el-service-discovery.md)
   * [Patrones arquitectónicos](system-design/patrones-arquitectonicos.md)
   * [Compensaciones en el diseño del sistema](system-design/compensaciones-en-el-diseno-del-sistema.md)
