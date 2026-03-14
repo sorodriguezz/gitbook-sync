@@ -100,5 +100,8 @@
   * [Sistemas Distribuidos y Microservicios](system-design/sistemas-distribuidos-y-microservicios/README.md)
     * [HeartBeats: Cómo los sistemas distribuidos se manten vivos](system-design/sistemas-distribuidos-y-microservicios/heartbeats-como-los-sistemas-distribuidos-se-manten-vivos.md)
     * [Diseño del sistema: ¿Qué es el Service Discovery?](system-design/sistemas-distribuidos-y-microservicios/diseno-del-sistema-que-es-el-service-discovery.md)
+    * [Consenso en el sistema distribuido](system-design/sistemas-distribuidos-y-microservicios/consenso-en-el-sistema-distribuido.md)
+    * [Cómo realizar el bloqueo distribuido](system-design/sistemas-distribuidos-y-microservicios/como-realizar-el-bloqueo-distribuido.md)
+    * [Explicación del protocolo Gossip](system-design/sistemas-distribuidos-y-microservicios/explicacion-del-protocolo-gossip.md)
   * [Patrones arquitectónicos](system-design/patrones-arquitectonicos.md)
   * [Compensaciones en el diseño del sistema](system-design/compensaciones-en-el-diseno-del-sistema.md)
